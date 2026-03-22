@@ -409,23 +409,22 @@ export default function Home() {
       <main>
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-white">
-          {/* Decorative ellipses */}
+          {/* Decorative ellipse */}
           <div
-            className="absolute rounded-full pointer-events-none"
+            className="absolute pointer-events-none bg-gray-100"
             style={{
-              width: "1907px",
-              height: "1429px",
+              width: "2200px",
+              height: "1700px",
               left: "50%",
-              top: "200px",
+              top: "185px",
               transform: "translateX(-50%)",
-              background:
-                "radial-gradient(ellipse, oklch(0.844 0.093 167.022 / 0.12) 0%, transparent 70%)",
+              borderRadius: "50%",
             }}
           />
 
           <div className="relative z-10 flex flex-col items-center text-center px-6 pt-20 pb-0 max-w-5xl mx-auto">
             <h1 className="text-5xl font-bold text-gray-900 leading-tight mb-6 max-w-2xl">
-              Instantly uncover WCAG accessibility issues
+              Instantly Uncover WCAG Accessibility Issues
             </h1>
             <p className="text-lg text-gray-500 mb-10 max-w-[500px] leading-relaxed">
               Scan any webpage in seconds. Powered by axe-core and running
@@ -433,7 +432,7 @@ export default function Home() {
             </p>
             <a
               href="#"
-              className="inline-flex items-center justify-center bg-[#47D4AA] hover:bg-[#3bbf97] text-white font-medium px-8 py-3.5 rounded-full text-sm transition-colors shadow-sm"
+              className="inline-flex items-center justify-center bg-[#47D4AA] hover:bg-[#3bbf97] text-gray-900 font-semibold px-8 py-3.5 rounded-full text-base transition-colors shadow-sm"
             >
               Get Extension
             </a>
@@ -443,7 +442,7 @@ export default function Home() {
           <div className="relative z-10 mt-14 flex justify-center">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/assets/za11y-hero-image.png"
+              src="/assets/za11y-hero-image-1.png"
               alt="Za11y accessibility scanner interface"
               className="w-full max-w-4xl h-auto"
             />
@@ -451,10 +450,10 @@ export default function Home() {
         </section>
 
         {/* How Za11y Works */}
-        <section className="bg-gray-50 py-24 mt-16">
-          <div className="max-w-6xl mx-auto px-16 flex items-center gap-16">
-            <div className="flex-1">
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+        <section className="bg-[#EEFFFA] py-16 md:py-24">
+          <div className="max-w-6xl mx-auto px-6 md:px-16 flex flex-col md:flex-row items-center gap-10 md:gap-16">
+            <div className="flex-1 text-center md:text-left">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 How Za11y works
               </h2>
               <p className="text-gray-500 leading-relaxed">
@@ -464,12 +463,12 @@ export default function Home() {
                 nostra, per inceptos himenaeos.
               </p>
             </div>
-            <div className="flex-1 flex justify-end">
+            <div className="flex justify-center md:justify-end w-full md:w-auto">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/assets/za11y-how-it-works.png"
+                src="/assets/za11y-how-it-works-2.png"
                 alt="How Za11y works"
-                className="w-full max-w-[420px] h-auto"
+                className="w-full max-w-sm md:max-w-none md:h-[500px] md:w-auto"
               />
             </div>
           </div>
