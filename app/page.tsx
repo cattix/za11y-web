@@ -439,20 +439,20 @@ export default function Home() {
           </div>
 
           {/* App Mockup */}
-          <div className="relative z-10 mt-14 flex justify-center">
+          <div className="relative z-10 mt-14 w-full">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/assets/za11y-hero-image-1.png"
+              src="/assets/za11y-hero-image-2.png"
               alt="Za11y accessibility scanner interface"
-              className="w-full max-w-4xl h-auto"
+              className="w-full h-auto"
             />
           </div>
         </section>
 
         {/* How Za11y Works */}
         <section className="bg-[#EEFFFA] py-16 md:py-24">
-          <div className="max-w-6xl mx-auto px-6 md:px-16 flex flex-col md:flex-row items-center gap-10 md:gap-16">
-            <div className="flex-1 text-center md:text-left">
+          <div className="max-w-6xl mx-auto px-6 md:px-16 flex flex-col md:flex-row items-center gap-10 md:gap-10">
+            <div className="flex-1 text-center md:text-left min-w-[330px]">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 How Za11y works
               </h2>
@@ -463,13 +463,23 @@ export default function Home() {
                 clear, actionable results—along with guidance on how to fix
                 them.
               </p>
+              <div className="flex flex-wrap justify-center md:justify-start gap-2 mt-6">
+                {["WCAG", "List Structure", "ARIA Attributes", "Color Contrast"].map((label) => (
+                  <span
+                    key={label}
+                    className="h-8 px-3 inline-flex items-center rounded-full bg-neutral-200 text-neutral-900 text-sm whitespace-nowrap"
+                  >
+                    {label}
+                  </span>
+                ))}
+              </div>
             </div>
             <div className="flex justify-center md:justify-end w-full md:w-auto">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/assets/za11y-how-it-works-2.png"
+                src="/assets/how-za11y-works.png"
                 alt="How Za11y works"
-                className="w-full max-w-sm md:max-w-none md:h-[500px] md:w-auto"
+                className="max-w-full h-auto md:max-h-[500px] md:w-auto"
               />
             </div>
           </div>
