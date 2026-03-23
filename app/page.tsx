@@ -410,7 +410,7 @@ export default function Home() {
           />
 
           <div className="relative z-10 flex flex-col items-center text-center px-6 pt-20 pb-0 max-w-5xl mx-auto">
-            <h1 className="text-5xl font-bold text-gray-900 leading-tight mb-6 max-w-2xl">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6 max-w-2xl">
               Instantly Uncover WCAG Accessibility Issues
             </h1>
             <p className="text-lg text-gray-500 mb-10 max-w-[500px] leading-relaxed">
@@ -426,7 +426,7 @@ export default function Home() {
           </div>
 
           {/* App Mockup */}
-          <div className="relative z-10 mt-14 w-full">
+          <div className="relative z-10 mt-14 w-full px-10">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/assets/za11y-hero-image-2.png"
