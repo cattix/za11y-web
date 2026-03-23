@@ -487,16 +487,8 @@ export default function Home() {
 
         {/* Manual Checks */}
         <section className="bg-gray-100 py-16 md:py-24">
-          <div className="max-w-6xl mx-auto px-6 md:px-16 flex items-center gap-16">
-            <div className="flex-1 flex justify-start">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/assets/za11y-manual-checks-1.png"
-                alt="Za11y manual checks"
-                style={{ height: "500px", width: "auto" }}
-              />
-            </div>
-            <div className="flex-1">
+          <div className="max-w-6xl mx-auto px-6 md:px-16 flex flex-col md:flex-row items-center gap-10 md:gap-10">
+            <div className="flex-1 text-center md:text-left min-w-[330px]">
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
                 Manual Checks
               </h2>
@@ -509,6 +501,24 @@ export default function Home() {
                 Review each item, mark its status, and ensure your experience
                 meets accessibility standards beyond automated scans.
               </p>
+              <div className="flex flex-wrap justify-center md:justify-start gap-2 mt-6">
+                {["Focus Management", "Keyboard Navigation", "Zoom & Reflow", "Reduced Motion", "Screen Reader"].map((label) => (
+                  <span
+                    key={label}
+                    className="h-8 px-3 inline-flex items-center rounded-full bg-neutral-200 text-neutral-900 text-sm whitespace-nowrap"
+                  >
+                    {label}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div className="flex justify-center md:justify-end w-full md:w-auto">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/assets/za11y-manual-checks-2.png"
+                alt="Za11y manual checks"
+                className="max-w-full h-auto md:max-h-[500px] md:w-auto"
+              />
             </div>
           </div>
         </section>
