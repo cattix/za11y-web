@@ -457,10 +457,11 @@ export default function Home() {
                 How Za11y works
               </h2>
               <p className="text-gray-500 leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                vulputate libero et velit interdum, ac aliquet odio mattis.
-                Class aptent taciti sociosqu ad litora torquent per conubia
-                nostra, per inceptos himenaeos.
+                Za11y runs directly in your browser, allowing you to scan any
+                webpage for accessibility issues in seconds. Open the extension,
+                click &ldquo;Run Accessibility Scan,&rdquo; and instantly see
+                clear, actionable results—along with guidance on how to fix
+                them.
               </p>
             </div>
             <div className="flex justify-center md:justify-end w-full md:w-auto">
@@ -475,14 +476,14 @@ export default function Home() {
         </section>
 
         {/* Manual Checks */}
-        <section className="bg-white py-24">
-          <div className="max-w-6xl mx-auto px-16 flex items-center gap-16">
+        <section className="bg-gray-100 py-16 md:py-24">
+          <div className="max-w-6xl mx-auto px-6 md:px-16 flex items-center gap-16">
             <div className="flex-1 flex justify-start">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/assets/za11y-manual-checks.png"
+                src="/assets/za11y-manual-checks-1.png"
                 alt="Za11y manual checks"
-                className="w-full max-w-[420px] h-auto"
+                style={{ height: "500px", width: "auto" }}
               />
             </div>
             <div className="flex-1">
@@ -490,15 +491,36 @@ export default function Home() {
                 Manual Checks
               </h2>
               <p className="text-gray-500 leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                vulputate libero et velit interdum, ac aliquet odio mattis.
-                Class aptent taciti sociosqu ad litora torquent per conubia
-                nostra, per inceptos himenaeos.
+                Not everything can be caught automatically. The manual checklist
+                helps you review important accessibility considerations that
+                require human judgment.
+                <br />
+                <br />
+                Review each item, mark its status, and ensure your experience
+                meets accessibility standards beyond automated scans.
               </p>
             </div>
           </div>
         </section>
       </main>
+
+      {/* Footer */}
+      <footer className="bg-white border-t border-gray-100 px-9 py-8">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/assets/za11y-cat-logo.svg"
+            alt="Za11y"
+            className="h-8 w-auto"
+          />
+          <div className="flex items-center gap-6 text-sm text-gray-500">
+            <a href="/privacy-policy" className="hover:text-gray-900 transition-colors">
+              Privacy Policy
+            </a>
+            <span>&copy; 2026 Za11y</span>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
