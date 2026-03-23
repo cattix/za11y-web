@@ -1,4 +1,3 @@
-const LOGO_URL = "/assets/za11y-logo.svg";
 
 function IssuesMockup({ className = "" }: { className?: string }) {
   return (
@@ -393,32 +392,20 @@ function ChecklistMockup({ className = "" }: { className?: string }) {
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className="h-16 bg-white border-b border-gray-100 flex items-center justify-between px-9 w-full">
-        {/* Logo */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={LOGO_URL} alt="Za11y" height={32} className="h-8 w-auto" />
-        <a
-          href="/privacy-policy"
-          className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
-        >
-          Privacy Policy
-        </a>
-      </nav>
-
       <main>
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-white">
           {/* Decorative ellipse */}
           <div
-            className="absolute pointer-events-none bg-gray-100"
+            className="absolute pointer-events-none"
             style={{
               width: "2200px",
               height: "1700px",
               left: "50%",
-              top: "185px",
+              top: "121px",
               transform: "translateX(-50%)",
               borderRadius: "50%",
+              background: "radial-gradient(circle, rgba(129, 140, 248, 0.9) 0%, rgba(224, 231, 255, 0) 62%)",
             }}
           />
 
@@ -486,7 +473,7 @@ export default function Home() {
         </section>
 
         {/* Manual Checks */}
-        <section className="bg-gray-100 py-16 md:py-24">
+        <section className="bg-white py-16 md:py-24">
           <div className="max-w-6xl mx-auto px-6 md:px-16 flex flex-col md:flex-row items-center gap-10 md:gap-10">
             <div className="flex-1 text-center md:text-left min-w-[330px]">
               <h2 className="text-4xl font-bold text-gray-900 mb-6">

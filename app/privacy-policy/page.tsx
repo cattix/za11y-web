@@ -1,5 +1,3 @@
-const LOGO_URL = "/assets/za11y-logo.svg";
-
 export const metadata = {
   title: "Privacy Policy — Za11y",
   description: "Za11y privacy policy. All processing happens locally in your browser.",
@@ -8,20 +6,6 @@ export const metadata = {
 export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-white flex flex-col">
-      {/* Navigation */}
-      <nav className="h-16 bg-white border-b border-gray-100 flex items-center justify-between px-9 w-full">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <a href="/">
-          <img src={LOGO_URL} alt="Za11y" className="h-8 w-auto" />
-        </a>
-        <a
-          href="/privacy-policy"
-          className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
-        >
-          Privacy Policy
-        </a>
-      </nav>
-
       {/* Content */}
       <main className="flex-1 py-16 px-6">
         <div className="max-w-2xl mx-auto">
