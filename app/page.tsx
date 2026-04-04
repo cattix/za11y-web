@@ -447,7 +447,7 @@ export default function Home() {
                 Za11y runs directly in your browser, allowing you to scan any
                 webpage for accessibility issues in seconds. Open the extension,
                 click &ldquo;Run Accessibility Scan,&rdquo; and instantly see
-                clear, actionable results—along with guidance on how to fix
+                clear, actionable results with guidance on how to fix
                 them.
               </p>
               <div className="flex flex-wrap justify-center md:justify-start gap-2 mt-6">
