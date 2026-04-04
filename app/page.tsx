@@ -431,7 +431,7 @@ export default function Home() {
             <img
               src="/assets/za11y-hero-image-2.png"
               alt="Za11y accessibility scanner interface"
-              className="w-full h-auto"
+              className="w-full h-auto max-w-5xl mx-auto block"
             />
           </div>
         </section>
