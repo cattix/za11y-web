@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: "Za11y — Accessibility Scanner",
   description:
     "Instantly uncover WCAG accessibility issues. Scan any webpage in seconds. Powered by axe-core and running locally in your browser for fast, secure results.",
+  verification: {
+    google: "Ds1dv1STs2dYhyU7C1ohTft3qvv22duv_ADTnxV3xhk",
+  },
 };
 
 export default function RootLayout({
