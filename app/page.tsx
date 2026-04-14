@@ -418,7 +418,9 @@ export default function Home() {
               locally in your browser for fast, secure results.
             </p>
             <a
-              href="#"
+              href="https://chromewebstore.google.com/detail/za11y/jckcbiebopjcodmdigkajekpkohnjegg"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center bg-[#47D4AA] hover:bg-[#3bbf97] text-gray-900 font-semibold px-8 py-3.5 rounded-full text-base transition-colors shadow-sm"
             >
               Get Extension
