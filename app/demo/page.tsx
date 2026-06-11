@@ -18,7 +18,7 @@ export default function DemoPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Demo notice banner */}
-      <div className="bg-[#47D4AA] text-gray-900 text-sm text-center py-2.5 px-4 font-medium">
+      <div className="bg-[#47D4AA] text-gray-900 text-sm text-center py-2 px-4 font-medium">
         This page contains intentional accessibility issues — scan it with Za11y to see them detected.
       </div>
 
@@ -43,7 +43,7 @@ export default function DemoPage() {
               small win on your journey to a healthier, happier life.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button className="bg-white text-gray-900 font-semibold px-8 py-3.5 rounded-full text-base hover:bg-gray-100 transition-colors">
+              <button className="bg-white text-gray-900 font-semibold px-8 py-4 rounded-full text-base hover:bg-gray-100 transition-colors">
                 Get started free
               </button>
               {/* MISSING LINK NAME — SVG icon only, no text or aria-label */}
@@ -262,7 +262,7 @@ export default function DemoPage() {
               {/* EMPTY BUTTON — submit with no text content or aria-label */}
               <button
                 type="submit"
-                className="w-full bg-indigo-600 hover:bg-indigo-700 transition-colors py-3.5 rounded-xl"
+                className="w-full bg-indigo-600 hover:bg-indigo-700 transition-colors py-4 rounded-xl"
               />
             </form>
             {/* LOW CONTRAST — gray-300 fine print on white */}
@@ -281,20 +281,20 @@ export default function DemoPage() {
         <section className="py-24 px-6 bg-gray-900 text-white">
           <div className="max-w-3xl mx-auto text-center">
             {/* HEADING HIERARCHY — h5, still no h2/h3 ever used */}
-            <h5 className="text-4xl md:text-5xl font-bold mb-5">Ready to bloom?</h5>
+            <h5 className="text-4xl md:text-5xl font-bold mb-6">Ready to bloom?</h5>
             {/* LOW CONTRAST — white/20 on gray-900 */}
             <p className="text-white/20 text-lg mb-10 max-w-md mx-auto leading-relaxed">
               It&apos;s free to get started. No credit card required. Cancel anytime.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button className="bg-[#47D4AA] hover:bg-[#3bbf97] transition-colors text-gray-900 font-semibold px-8 py-3.5 rounded-full">
+              <button className="bg-[#47D4AA] hover:bg-[#3bbf97] transition-colors text-gray-900 font-semibold px-8 py-4 rounded-full">
                 Create free account
               </button>
               {/* MISSING LINK NAMES — icon-only social links, no aria-label */}
-              <div className="flex gap-3 items-center">
+              <div className="flex gap-4 items-center">
                 <a
                   href="#"
-                  className="w-11 h-11 rounded-full border border-white/20 flex items-center justify-center hover:border-white/40 transition-colors"
+                  className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:border-white/40 transition-colors"
                 >
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.261 5.632 5.903-5.632zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
@@ -302,7 +302,7 @@ export default function DemoPage() {
                 </a>
                 <a
                   href="#"
-                  className="w-11 h-11 rounded-full border border-white/20 flex items-center justify-center hover:border-white/40 transition-colors"
+                  className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:border-white/40 transition-colors"
                 >
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
@@ -310,7 +310,7 @@ export default function DemoPage() {
                 </a>
                 <a
                   href="#"
-                  className="w-11 h-11 rounded-full border border-white/20 flex items-center justify-center hover:border-white/40 transition-colors"
+                  className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:border-white/40 transition-colors"
                 >
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
