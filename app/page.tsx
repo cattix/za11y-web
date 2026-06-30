@@ -30,7 +30,7 @@ export default function Home() {
           <div className="mt-14 w-full max-w-[1191px] mx-auto px-6">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/assets/za11y-hero-browser-mockup.png"
+              src="/assets/za11y-hero-demo.png"
               alt="Za11y accessibility scanner running on a webpage"
               className="w-full h-auto rounded-2xl shadow-[0px_1px_14px_0px_rgba(0,0,0,0.15),0px_2px_5px_2px_rgba(0,0,0,0.05)]"
             />
