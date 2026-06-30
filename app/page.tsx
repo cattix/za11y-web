@@ -40,13 +40,13 @@ export default function Home() {
         <FeaturesSection />
 
         {/* CTA banner */}
-        <section className="py-16 px-6">
+        <section className="bg-gray-700 py-16 px-6">
           <div className="max-w-[1200px] mx-auto bg-gray-50 rounded-3xl px-10 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex flex-col gap-2">
               <h2 className="text-[28px] md:text-[32px] font-bold text-gray-900 leading-10 max-w-[699px]">
                 Build More Accessible Experiences
               </h2>
-              <p className="text-[18px] md:text-[20px] font-medium text-gray-700 leading-7 max-w-[673px]">
+              <p className="text-[18px] md:text-[20px] font-medium text-gray-900 leading-7 max-w-[673px]">
                 Identify accessibility issues, review manual checks, and improve
                 compliance with confidence.
               </p>
