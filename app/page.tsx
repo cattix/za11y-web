@@ -1,534 +1,92 @@
+import FeaturesSection from "./components/FeaturesSection";
 
-function IssuesMockup({ className = "" }: { className?: string }) {
-  return (
-    <div
-      className={`bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden text-xs ${className}`}
-    >
-      {/* Header */}
-      <div className="px-4 pt-3 pb-0 border-b border-gray-100">
-        <div className="flex items-center justify-between mb-2">
-          <div className="flex items-center gap-1.5">
-            <span className="w-2 h-2 rounded-full bg-green-400 inline-block" />
-            <span className="text-gray-500 truncate max-w-[200px]">
-              cathy.villamar.com/projects/dog-walking-app-case-study
-            </span>
-          </div>
-          <div className="flex items-center gap-1 text-gray-400">
-            <svg
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
-              <polyline points="9 22 9 12 15 12 15 22" />
-            </svg>
-            <svg
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <circle cx="12" cy="12" r="10" />
-              <circle cx="12" cy="12" r="3" />
-            </svg>
-            <svg
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
-              <polyline points="7 10 12 15 17 10" />
-              <line x1="12" y1="15" x2="12" y2="3" />
-            </svg>
-          </div>
-        </div>
-        {/* Tabs */}
-        <div className="flex">
-          <button className="flex-1 py-2 text-center text-gray-500 border-b-2 border-transparent text-[11px]">
-            Issues
-          </button>
-          <button className="flex-1 py-2 text-center text-gray-900 font-medium border-b-2 border-gray-900 text-[11px]">
-            Checklist
-          </button>
-        </div>
-      </div>
-
-      {/* Filter row */}
-      <div className="px-4 py-2 flex items-center gap-1.5 border-b border-gray-100">
-        <span className="px-1.5 py-0.5 rounded text-[10px] bg-red-100 text-red-700 font-medium">
-          Critical: 1
-        </span>
-        <span className="px-1.5 py-0.5 rounded text-[10px] bg-orange-100 text-orange-700 font-medium">
-          Serious: 3
-        </span>
-        <span className="px-1.5 py-0.5 rounded text-[10px] bg-amber-100 text-amber-700 font-medium">
-          Moderate: 1
-        </span>
-        <span className="px-1.5 py-0.5 rounded text-[10px] bg-blue-100 text-blue-700 font-medium">
-          Minor: 1
-        </span>
-        <div className="ml-auto">
-          <span className="text-[10px] text-gray-500 flex items-center gap-0.5">
-            WCAG
-            <svg
-              width="10"
-              height="10"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <polyline points="6 9 12 15 18 9" />
-            </svg>
-          </span>
-        </div>
-      </div>
-
-      {/* Issues list */}
-      <div className="divide-y divide-gray-50">
-        {/* Critical group */}
-        <div className="px-4 py-2">
-          <div className="flex items-center gap-1 mb-1.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-red-500 inline-block" />
-            <span className="font-semibold text-gray-700 text-[11px]">
-              Critical (1)
-            </span>
-            <span className="ml-auto text-[10px] text-gray-400">WCAG AA</span>
-          </div>
-          <p className="text-gray-600 text-[11px] pl-3">
-            ARIA attributes must conform to valid values
-          </p>
-          <div className="flex gap-2 mt-1 pl-3 text-[10px] text-gray-400">
-            <span>WCAG A</span>
-            <span>p=0</span>
-          </div>
-        </div>
-
-        {/* Serious group */}
-        <div className="px-4 py-2">
-          <div className="flex items-center gap-1 mb-1.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-orange-400 inline-block" />
-            <span className="font-semibold text-gray-700 text-[11px]">
-              Serious (3)
-            </span>
-          </div>
-          <p className="text-gray-600 text-[11px] pl-3 mb-1">
-            Elements must meet minimum color contrast ratio thresholds
-          </p>
-          <div className="flex items-center gap-2 pl-3 mb-1">
-            <span className="text-[10px] text-gray-400">WCAG AA</span>
-            <span className="text-[10px] text-gray-400">Mid-3a</span>
-          </div>
-          <p className="text-gray-600 text-[11px] pl-3">
-            Elements must meet minimum color contrast ratio thresholds
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function ChecklistMockup({ className = "" }: { className?: string }) {
-  return (
-    <div
-      className={`bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden text-xs ${className}`}
-    >
-      {/* Header */}
-      <div className="px-4 pt-3 pb-0 border-b border-gray-100">
-        <div className="flex items-center justify-between mb-2">
-          <div className="flex items-center gap-1.5">
-            <span className="w-2 h-2 rounded-full bg-green-400 inline-block" />
-            <span className="text-gray-500 truncate max-w-[180px]">
-              cathy.villamar.com/projects/dog-walking-app-case-study
-            </span>
-          </div>
-          <div className="flex items-center gap-1 text-gray-400">
-            <svg
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
-              <polyline points="9 22 9 12 15 12 15 22" />
-            </svg>
-            <svg
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
-              <polyline points="7 10 12 15 17 10" />
-              <line x1="12" y1="15" x2="12" y2="3" />
-            </svg>
-          </div>
-        </div>
-        {/* Tabs */}
-        <div className="flex">
-          <button className="flex-1 py-2 text-center text-gray-900 font-medium border-b-2 border-gray-900 text-[11px]">
-            Checklist
-          </button>
-          <button className="flex-1 py-2 text-center text-gray-500 border-b-2 border-transparent text-[11px]">
-            Issues
-          </button>
-        </div>
-      </div>
-
-      {/* Automated Checks section */}
-      <div className="border-b border-gray-100">
-        <div className="px-4 py-2 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <svg
-              width="14"
-              height="14"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              className="text-gray-500"
-            >
-              <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
-              <polyline points="22 4 12 14.01 9 11.01" />
-            </svg>
-            <span className="font-semibold text-gray-700 text-[11px]">
-              Automated Checks Requiring Review
-            </span>
-          </div>
-          <div className="flex items-center gap-1">
-            <span className="text-[10px] text-gray-400">0/3</span>
-            <svg
-              width="12"
-              height="12"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              className="text-gray-400"
-            >
-              <polyline points="18 15 12 9 6 15" />
-            </svg>
-          </div>
-        </div>
-
-        {/* Expanded issue item */}
-        <div className="mx-3 mb-3 rounded-lg border border-gray-200 overflow-hidden">
-          <div className="px-3 py-2 bg-gray-50 border-b border-gray-200">
-            <p className="text-[11px] text-gray-800 font-medium">
-              ARIA role should be appropriate for the element
-            </p>
-            <p className="text-[10px] text-gray-500 mt-0.5">
-              Ensure role attribute has an appropriate value for the element.
-            </p>
-            <button className="text-[10px] text-gray-500 mt-1 flex items-center gap-0.5">
-              Learn more
-              <svg
-                width="10"
-                height="10"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
-                <polyline points="18 15 12 9 6 15" />
-              </svg>
-            </button>
-          </div>
-          <div className="px-3 py-2 flex items-center justify-between">
-            <span className="text-[10px] text-gray-500">
-              Set Status for the element
-            </span>
-            <button className="text-[10px] text-gray-600 border border-gray-200 rounded px-2 py-0.5 flex items-center gap-0.5">
-              Set Status
-              <svg
-                width="10"
-                height="10"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
-                <polyline points="6 9 12 15 18 9" />
-              </svg>
-            </button>
-          </div>
-          <div className="px-3 py-2 border-t border-gray-100 flex gap-3">
-            <label className="flex items-center gap-1 text-[10px] text-gray-600">
-              <input
-                type="radio"
-                name="status"
-                className="accent-green-500"
-                readOnly
-              />
-              Passed
-            </label>
-            <label className="flex items-center gap-1 text-[10px] text-gray-600">
-              <input type="radio" name="status" readOnly />
-              Failed
-            </label>
-            <label className="flex items-center gap-1 text-[10px] text-gray-600">
-              <input type="radio" name="status" readOnly />
-              N/A
-            </label>
-          </div>
-          <div className="px-3 py-2 border-t border-gray-100 space-y-1">
-            <div className="flex justify-between">
-              <span className="text-[10px] text-gray-500">WCAG Criteria</span>
-              <span className="text-[10px] text-gray-700">143</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-[10px] text-gray-500">Impact</span>
-              <span className="text-[10px] text-gray-700">Serious</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-[10px] text-gray-500">Confidence</span>
-              <span className="text-[10px] text-gray-700">Medium</span>
-            </div>
-            <div className="flex justify-between items-center pt-1">
-              <span className="text-[10px] text-gray-500">Show highlights</span>
-              <div className="w-7 h-4 rounded-full bg-green-400 relative">
-                <div className="absolute right-0.5 top-0.5 w-3 h-3 rounded-full bg-white shadow-sm" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Manual Validation */}
-      <div className="px-4 py-2 border-b border-gray-100 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <svg
-            width="14"
-            height="14"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            className="text-gray-500"
-          >
-            <path d="M9 11l3 3L22 4" />
-            <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" />
-          </svg>
-          <div>
-            <p className="font-semibold text-gray-700 text-[11px]">
-              Manual Validation
-            </p>
-            <p className="text-[10px] text-gray-400">
-              Verify keyboard accessibility without a mouse
-            </p>
-          </div>
-        </div>
-        <div className="flex items-center gap-1">
-          <span className="text-[10px] text-gray-400">0/3</span>
-          <svg
-            width="12"
-            height="12"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            className="text-gray-400"
-          >
-            <polyline points="6 9 12 15 18 9" />
-          </svg>
-        </div>
-      </div>
-
-      {/* Keyboard Navigation */}
-      <div className="px-4 py-2 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <svg
-            width="14"
-            height="14"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            className="text-gray-500"
-          >
-            <rect x="2" y="6" width="20" height="12" rx="2" />
-            <path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M8 14h8" />
-          </svg>
-          <div>
-            <p className="font-semibold text-gray-700 text-[11px]">
-              Keyboard Navigation
-            </p>
-            <p className="text-[10px] text-gray-400">
-              Verify keyboard accessibility without a mouse
-            </p>
-          </div>
-        </div>
-        <div className="flex items-center gap-1">
-          <span className="text-[10px] text-gray-400">0/5</span>
-          <svg
-            width="12"
-            height="12"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            className="text-gray-400"
-          >
-            <polyline points="6 9 12 15 18 9" />
-          </svg>
-        </div>
-      </div>
-    </div>
-  );
-}
+const CHROME_STORE_URL =
+  "https://chromewebstore.google.com/detail/za11y/jckcbiebopjcodmdigkajekpkohnjegg";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen">
       <main>
-        {/* Hero Section */}
-        <section className="relative overflow-hidden bg-white">
-          {/* Decorative ellipse */}
-          <div
-            className="absolute pointer-events-none"
-            style={{
-              width: "2200px",
-              height: "1700px",
-              left: "50%",
-              top: "121px",
-              transform: "translateX(-50%)",
-              borderRadius: "50%",
-              background: "radial-gradient(circle, rgba(129, 140, 248, 0.9) 0%, rgba(224, 231, 255, 0) 62%)",
-            }}
-          />
-
-          <div className="relative z-10 flex flex-col items-center text-center px-6 pt-20 pb-0 max-w-5xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6 max-w-2xl">
-              Instantly Uncover WCAG Accessibility Issues
+        {/* Hero */}
+        <section className="bg-gray-100 flex flex-col items-center pb-16">
+          <div className="flex flex-col items-center text-center px-6 pt-[56px] pb-0 gap-6 w-full max-w-5xl mx-auto">
+            <h1 className="text-[40px] md:text-[56px] font-bold text-gray-900 leading-[1.14] tracking-[-0.3px] max-w-[828px]">
+              Catch Accessibility Issues Before They Ship
             </h1>
-            <p className="text-lg text-gray-500 mb-10 max-w-[500px] leading-relaxed">
-              Scan any webpage in seconds. Powered by axe-core and running
-              locally in your browser for fast, secure results.
+            <p className="text-xl md:text-[28px] text-gray-700 leading-8 whitespace-nowrap">
+              No accounts, no setup, and no learning curve.
             </p>
             <a
-              href="https://chromewebstore.google.com/detail/za11y/jckcbiebopjcodmdigkajekpkohnjegg"
+              href={CHROME_STORE_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-[#47D4AA] hover:bg-[#3bbf97] text-gray-900 font-semibold px-8 py-3.5 rounded-full text-base transition-colors shadow-sm"
+              className="inline-flex items-center justify-center bg-gray-900 hover:bg-gray-800 text-gray-100 font-medium px-8 h-12 rounded-full text-[20px] tracking-[-0.3px] transition-colors"
             >
               Get Extension
             </a>
           </div>
 
-          {/* App Mockup */}
-          <div className="relative z-10 mt-14 w-full px-10">
+          {/* Hero browser mockup */}
+          <div className="mt-14 w-full max-w-[1191px] mx-auto px-6">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/assets/za11y-hero-image-2.png"
-              alt="Za11y accessibility scanner interface"
-              className="w-full h-auto max-w-5xl mx-auto block"
+              src="/assets/za11y-hero-browser-mockup.png"
+              alt="Za11y accessibility scanner running on a webpage"
+              className="w-full h-auto rounded-2xl shadow-[0px_1px_14px_0px_rgba(0,0,0,0.15),0px_2px_5px_2px_rgba(0,0,0,0.05)]"
             />
           </div>
         </section>
 
-        {/* How Za11y Works */}
-        <section className="bg-[#EEFFFA] py-16 md:py-24">
-          <div className="max-w-6xl mx-auto px-6 md:px-16 flex flex-col md:flex-row items-center gap-10 md:gap-10">
-            <div className="flex-1 text-center md:text-left min-w-[330px]">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                How Za11y works
-              </h2>
-              <p className="text-gray-500 leading-relaxed">
-                Za11y runs directly in your browser, allowing you to scan any
-                webpage for accessibility issues in seconds. Open the extension,
-                click &ldquo;Run Accessibility Scan,&rdquo; and instantly see
-                clear, actionable results with guidance on how to fix
-                them.
-              </p>
-              <div className="flex flex-wrap justify-center md:justify-start gap-2 mt-6">
-                {["WCAG", "List Structure", "ARIA Attributes", "Color Contrast"].map((label) => (
-                  <span
-                    key={label}
-                    className="h-8 px-3 inline-flex items-center rounded-full bg-neutral-200 text-neutral-900 text-sm whitespace-nowrap"
-                  >
-                    {label}
-                  </span>
-                ))}
-              </div>
-            </div>
-            <div className="flex justify-center md:justify-end w-full md:w-auto">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/assets/how-za11y-works.png"
-                alt="How Za11y works"
-                className="max-w-full h-auto md:max-h-[500px] md:w-auto"
-              />
-            </div>
-          </div>
-        </section>
+        <FeaturesSection />
 
-        {/* Manual Checks */}
-        <section className="bg-white py-16 md:py-24">
-          <div className="max-w-6xl mx-auto px-6 md:px-16 flex flex-col md:flex-row items-center gap-10 md:gap-10">
-            <div className="flex-1 text-center md:text-left min-w-[330px]">
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Manual Checks
+        {/* CTA banner */}
+        <section className="py-16 px-6">
+          <div className="max-w-[1200px] mx-auto bg-gray-50 rounded-3xl px-10 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex flex-col gap-2">
+              <h2 className="text-[28px] md:text-[32px] font-bold text-gray-900 leading-10 max-w-[699px]">
+                Build More Accessible Experiences
               </h2>
-              <p className="text-gray-500 leading-relaxed">
-                Not everything can be caught automatically. The manual checklist
-                helps you review important accessibility considerations that
-                require human judgment.
-                <br />
-                <br />
-                Review each item, mark its status, and ensure your experience
-                meets accessibility standards beyond automated scans.
+              <p className="text-[18px] md:text-[20px] font-medium text-gray-700 leading-7 max-w-[673px]">
+                Identify accessibility issues, review manual checks, and improve
+                compliance with confidence.
               </p>
-              <div className="flex flex-wrap justify-center md:justify-start gap-2 mt-6">
-                {["Focus Management", "Keyboard Navigation", "Zoom & Reflow", "Reduced Motion", "Screen Reader"].map((label) => (
-                  <span
-                    key={label}
-                    className="h-8 px-3 inline-flex items-center rounded-full bg-neutral-200 text-neutral-900 text-sm whitespace-nowrap"
-                  >
-                    {label}
-                  </span>
-                ))}
-              </div>
             </div>
-            <div className="flex justify-center md:justify-end w-full md:w-auto">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/assets/za11y-manual-checks-2.png"
-                alt="Za11y manual checks"
-                className="max-w-full h-auto md:max-h-[500px] md:w-auto"
-              />
-            </div>
+            <a
+              href={CHROME_STORE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center bg-gray-900 hover:bg-gray-800 text-gray-100 font-medium px-8 h-12 rounded-full text-[20px] tracking-[-0.3px] transition-colors whitespace-nowrap shrink-0"
+            >
+              Install Extension
+            </a>
           </div>
         </section>
       </main>
 
       {/* Footer */}
-      <footer className="bg-white border-t border-gray-100 px-9 py-8">
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/assets/za11y-cat-logo.svg"
-            alt="Za11y"
-            className="h-8 w-auto"
-          />
-          <div className="flex items-center gap-6 text-sm text-gray-500">
-            <a href="/privacy-policy" className="hover:text-gray-900 transition-colors">
-              Privacy Policy
-            </a>
-            <span>&copy; 2026 Za11y</span>
+      <footer className="bg-gray-800 px-10 py-8 flex items-end justify-between min-h-[280px]">
+        <div className="flex flex-col justify-between h-full gap-16">
+          <div className="flex flex-col gap-4">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/assets/za11y-cat-logo.svg"
+              alt="Za11y"
+              className="h-12 w-auto"
+            />
+            <p className="text-gray-100 text-[20px] leading-8 tracking-[1px]">
+              Instantly uncover WCAG
+              <br />
+              accessibility issues
+            </p>
           </div>
+          <p className="text-gray-100 text-[16px] leading-6">© 2026 Za11y</p>
         </div>
+        <a
+          href="/privacy-policy"
+          className="text-gray-100 text-[16px] leading-6 hover:text-white transition-colors"
+        >
+          Privacy Policy
+        </a>
       </footer>
     </div>
   );
