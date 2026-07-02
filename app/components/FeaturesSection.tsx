@@ -44,7 +44,7 @@ export default function FeaturesSection() {
           <p className="text-[18px] md:text-[20px] text-gray-100 mt-6 max-w-[851px] mx-auto leading-8">
             From automated WCAG testing to guided manual reviews, Za11y helps
             you identify issues, understand their impact, and locate exactly
-            where they occur on the page.
+            where they are on the page.
           </p>
         </div>
 
