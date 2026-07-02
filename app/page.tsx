@@ -66,14 +66,14 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-gray-800 px-10 py-8 flex items-end justify-between h-[280px]">
         <div className="flex flex-col justify-between h-full items-start w-[254px]">
-          <div className="flex flex-col gap-[18px]">
+          <div className="flex flex-col gap-[8px]">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/assets/za11y-cat-logo.svg"
               alt="Za11y"
               className="h-12 w-auto self-start"
             />
-            <p className="text-gray-100 text-[20px] leading-8 tracking-[1px]">
+            <p className="text-gray-100 text-[16px] leading-7 tracking-[1px]">
               Instantly uncover WCAG
               <br />
               accessibility issues
