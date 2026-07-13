@@ -1,5 +1,5 @@
-import FeaturesSection from "./components/FeaturesSection";
-import HeroVideo from "./components/HeroVideo";
+import FeaturesSection from "../components/FeaturesSection";
+import HeroVideo from "../components/HeroVideo";
 
 const CHROME_STORE_URL =
   "https://chromewebstore.google.com/detail/za11y/jckcbiebopjcodmdigkajekpkohnjegg";
