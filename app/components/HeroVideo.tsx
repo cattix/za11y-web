@@ -22,7 +22,7 @@ export default function HeroVideo() {
     <div className="relative w-full">
       <video
         ref={videoRef}
-        src="/assets/za11y-hero-demo.mp4"
+        src="/assets/za11y-hero-how-to-1.mp4"
         autoPlay
         loop
         muted
@@ -32,7 +32,7 @@ export default function HeroVideo() {
       <button
         onClick={toggle}
         aria-label={playing ? "Pause video" : "Play video"}
-        className="absolute bottom-3 right-3 w-9 h-9 rounded-full bg-gray-700/80 flex items-center justify-center hover:bg-gray-700 transition-colors"
+        className="absolute bottom-3 right-3 w-9 h-9 rounded-full bg-gray-700/80 flex items-center justify-center hover:bg-gray-700 transition-colors cursor-pointer"
       >
         {playing ? (
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
