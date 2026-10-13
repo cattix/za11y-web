@@ -103,7 +103,6 @@ const comparison = [
       "ARIA and landmark errors",
       "Heading structure",
     ],
-    accent: false,
   },
   {
     title: "Guided manual review",
@@ -114,9 +113,16 @@ const comparison = [
       "Content clarity",
       "Screen reader experience",
     ],
-    accent: true,
   },
 ];
+
+// Spacing system — mobile / tablet / desktop
+// Section padding: 64 / 96 / 112. Heading → content: 32 / 40 / 48. Card gaps: 16 / 24 / 24.
+// The hero and final CTA get extra room on purpose.
+const sectionX = "px-5 md:px-16 lg:px-28";
+const section = `${sectionX} py-16 md:py-24 lg:py-28`;
+const headingGap = "gap-8 md:gap-10 lg:gap-12";
+const cardGap = "gap-4 md:gap-6";
 
 const card = "rounded-[20px] border border-[#233047] bg-[#131C2E] md:rounded-3xl";
 
@@ -199,7 +205,7 @@ export default function RedesignPage() {
 
       <main id="main">
         {/* Hero */}
-        <section className="relative overflow-hidden px-5 pt-10 pb-14 md:px-16 md:pt-22 md:pb-30 lg:pl-28">
+        <section className="relative overflow-hidden px-5 pt-10 pb-20 md:px-16 md:pt-22 md:pb-28 lg:pb-32 lg:pl-28">
           <Glow className="-left-15 top-75 h-[520px] w-[520px] md:top-[-220px] md:left-auto md:right-[-160px] md:h-[900px] md:w-[900px]" />
           <div className="relative mx-auto flex max-w-[1264px] flex-col gap-10 lg:flex-row lg:items-center lg:gap-16">
             <div className="flex flex-col gap-5 md:gap-7 lg:w-[620px] lg:shrink-0">
@@ -265,7 +271,7 @@ export default function RedesignPage() {
         {/* Audience */}
         <section
           aria-labelledby="audience-heading"
-          className="border-y border-[#233047] px-5 py-6 md:px-16 md:py-7 lg:px-28"
+          className={`border-y border-[#233047] py-6 md:py-7 ${sectionX}`}
         >
           <div className="mx-auto flex max-w-[1216px] flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
             <h2
@@ -291,10 +297,10 @@ export default function RedesignPage() {
         <section
           id="features"
           aria-labelledby="features-heading"
-          className="px-5 py-16 md:px-16 md:py-30 lg:px-28"
+          className={section}
         >
-          <div className="mx-auto max-w-[1216px]">
-            <div className="flex flex-col gap-2.5 pb-4 md:pb-10 lg:flex-row lg:items-end lg:justify-between">
+          <div className={`mx-auto flex max-w-[1216px] flex-col ${headingGap}`}>
+            <div className="flex flex-col gap-2.5 lg:flex-row lg:items-end lg:justify-between">
               <div className="flex flex-col gap-2.5 md:gap-3.5">
                 <p className="text-xs font-semibold tracking-[1.2px] text-[#47D4AA] md:text-sm">
                   {"// FEATURES"}
@@ -315,9 +321,9 @@ export default function RedesignPage() {
               </p>
             </div>
 
-            <div className="flex flex-col gap-4 md:gap-5">
+            <div className={`flex flex-col ${cardGap}`}>
               {/* Row 1 */}
-              <div className="flex flex-col gap-4 md:gap-5 lg:flex-row">
+              <div className={`flex flex-col lg:flex-row ${cardGap}`}>
                 <article
                   className={`${card} flex flex-1 flex-col overflow-hidden pt-6 pl-6 md:pt-9 md:pl-9 xl:flex-row xl:items-end xl:gap-7`}
                 >
@@ -358,7 +364,7 @@ export default function RedesignPage() {
               </div>
 
               {/* Row 2 */}
-              <div className="flex flex-col gap-4 md:gap-5 lg:flex-row">
+              <div className={`flex flex-col lg:flex-row ${cardGap}`}>
                 <MockupCard
                   eyebrow="02 UNDERSTAND"
                   title="Understand every issue"
@@ -376,7 +382,7 @@ export default function RedesignPage() {
               </div>
 
               {/* Row 3 */}
-              <ul className="flex flex-col gap-4 md:gap-5 lg:flex-row">
+              <ul className={`flex flex-col lg:flex-row ${cardGap}`}>
                 {smallFeatures.map((f) => (
                   <li
                     key={f.title}
@@ -401,22 +407,21 @@ export default function RedesignPage() {
         {/* Automated + manual */}
         <section
           aria-labelledby="compare-heading"
-          className="bg-[#0F1726] px-5 py-16 md:px-16 md:py-28 lg:px-28"
+          className={`bg-[#0F1726] ${section}`}
         >
-          <div className="mx-auto flex max-w-[1216px] flex-col gap-6 md:items-center md:gap-12">
+          <div className={`mx-auto flex max-w-[1216px] flex-col md:items-center ${headingGap}`}>
             <h2
               id="compare-heading"
               className="text-[28px] leading-[34px] font-bold tracking-[-0.7px] md:max-w-[760px] md:text-center md:text-[40px] md:leading-12 md:tracking-[-1px]"
             >
-              Automation finds a lot. Za11y helps you find the rest.
+              <span className="md:whitespace-nowrap">Automated scans catch issues.</span>{" "}
+              <span className="md:whitespace-nowrap">Manual reviews go further.</span>
             </h2>
-            <div className="flex w-full flex-col gap-4 md:gap-5 lg:flex-row">
+            <div className={`flex w-full flex-col lg:flex-row ${cardGap}`}>
               {comparison.map((c) => (
                 <div
                   key={c.title}
-                  className={`flex flex-1 flex-col gap-3 rounded-[20px] border bg-[#131C2E] p-[22px] md:gap-5 md:rounded-3xl md:p-8 ${
-                    c.accent ? "border-[#47D4AA]/60" : "border-[#233047]"
-                  }`}
+                  className="flex flex-1 flex-col gap-3 rounded-[20px] border border-[#233047] bg-[#131C2E] p-[22px] md:gap-5 md:rounded-3xl md:p-8"
                 >
                   <div className="flex flex-col-reverse gap-1 md:flex-row md:items-center md:justify-between">
                     <h3 className="text-[19px] font-bold md:text-2xl">{c.title}</h3>
@@ -442,7 +447,7 @@ export default function RedesignPage() {
         {/* CTA */}
         <section
           aria-labelledby="cta-heading"
-          className="relative overflow-hidden px-5 py-20 text-center md:px-16 md:py-34"
+          className="relative overflow-hidden px-5 py-20 text-center md:px-16 md:py-28 lg:py-34"
         >
           <Glow className="top-0 left-1/2 h-[400px] w-[500px] -translate-x-1/2 md:h-[600px] md:w-[1100px]" />
           <div className="relative mx-auto flex max-w-[760px] flex-col items-center gap-4 md:gap-6">
@@ -469,7 +474,7 @@ export default function RedesignPage() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-[#233047] px-5 py-8 md:px-16 md:py-10 lg:px-28">
+      <footer className={`border-t border-[#233047] py-8 md:py-10 ${sectionX}`}>
         <div className="mx-auto flex max-w-[1216px] flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <img
             src="/assets/za11y-cat-logo.svg"
