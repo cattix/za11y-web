@@ -9,6 +9,8 @@
  * - Missing link names (icon-only links with no aria-label)
  */
 
+import Link from "next/link";
+
 export const metadata = {
   title: "Demo Page — Za11y",
   description: "A demo page with intentional accessibility issues to demonstrate Za11y's scanning capabilities.",
@@ -21,6 +23,23 @@ export default function DemoPage() {
       <div className="bg-[#47D4AA] text-gray-900 text-sm text-center py-2 px-4 font-medium">
         This page contains intentional accessibility issues — scan it with Za11y to see them detected.
       </div>
+
+      <div className="relative">
+        {/* Home link back to the Za11y site (accessible — not part of the demo violations) */}
+        <header className="absolute top-0 left-0 z-20 px-6 py-4">
+          <Link
+            href="/"
+            className="inline-block rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#47D4AA]"
+          >
+            <img
+              src="/assets/za11y-cat-logo.svg"
+              alt="Za11y home"
+              width={165}
+              height={48}
+              className="h-9 w-auto"
+            />
+          </Link>
+        </header>
 
       <main>
         {/* ── Hero ─────────────────────────────────────────────────────────
@@ -323,6 +342,7 @@ export default function DemoPage() {
           </div>
         </section>
       </main>
+      </div>
 
       {/* Footer */}
       <footer className="bg-gray-950 text-white px-9 py-8">
