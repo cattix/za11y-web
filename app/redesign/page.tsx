@@ -201,11 +201,13 @@ export default function RedesignPage() {
             <div className="flex flex-col gap-5 md:gap-7 lg:w-[620px] lg:shrink-0">
               <h1 className="text-[42px] leading-[46px] font-bold tracking-[-1.4px] md:text-[62px] md:leading-[68px] md:tracking-[-2px]">
                 Catch accessibility issues{" "}
-                <span className="text-[#47D4AA]">before they ship.</span>
+                <span className="text-[#47D4AA]">
+                  before <span className="whitespace-nowrap">they ship.</span>
+                </span>
               </h1>
               <p className="text-[17px] leading-[27px] text-[#C7CDD6] md:text-xl md:leading-8">
-                Find accessibility issues, understand what needs fixing, and catch what
-                automated testing misses. All in one simple Chrome extension.
+                Find accessibility issues, understand what needs attention, and catch what
+                automated testing misses. All in one Chrome extension.
               </p>
               <div className="flex flex-col gap-2.5 sm:flex-row sm:gap-3">
                 <PrimaryButton>Add to Chrome — free</PrimaryButton>
