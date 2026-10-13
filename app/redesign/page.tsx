@@ -297,7 +297,7 @@ export default function RedesignPage() {
         <section
           id="features"
           aria-labelledby="features-heading"
-          className={section}
+          className={`${sectionX} pt-16 pb-4 md:pt-24 md:pb-6 lg:pt-28`}
         >
           <div className={`mx-auto flex max-w-[1216px] flex-col ${headingGap}`}>
             <div className="flex flex-col gap-2.5 lg:flex-row lg:items-end lg:justify-between">
