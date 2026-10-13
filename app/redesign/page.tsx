@@ -64,6 +64,12 @@ function Glow({ className }: { className: string }) {
   );
 }
 
+const demoSteps = [
+  "Open the demo page in Chrome.",
+  "Click the Za11y icon in your toolbar to open the side panel.",
+  "Run a scan and explore the issues it finds.",
+];
+
 const severity = [
   { label: "Serious 3", className: "bg-[#FEE2E2] text-[#991B1B]" },
   { label: "Moderate 1", className: "bg-[#FEF3C7] text-[#92400E]" },
@@ -223,7 +229,6 @@ export default function RedesignPage() {
               </p>
               <div className="flex flex-col gap-2.5 sm:flex-row sm:gap-3">
                 <PrimaryButton>Add to Chrome — free</PrimaryButton>
-                <GhostButton href="/demo">Scan the demo page</GhostButton>
               </div>
               <ul className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-[13px] text-gray-400 md:text-sm">
                 {heroPoints.map((point, i) => (
@@ -463,14 +468,47 @@ export default function RedesignPage() {
               Install Za11y in seconds and run your first scan on the page you’re already
               looking at.
             </p>
-            <div className="flex w-full flex-col gap-2.5 pt-2 sm:w-auto sm:flex-row sm:gap-3">
+            <div className="flex w-full flex-col pt-2 sm:w-auto">
               <PrimaryButton className="md:h-14 md:px-8 md:text-lg">
                 Add to Chrome — free
               </PrimaryButton>
-              <GhostButton href="/demo" className="md:h-14 md:text-lg">
-                Try the demo
-              </GhostButton>
             </div>
+          </div>
+
+          {/* Demo — only useful once the extension is installed, so it's kept separate */}
+          <div
+            aria-labelledby="demo-heading"
+            role="region"
+            className={`${card} relative mx-auto mt-14 flex max-w-[760px] flex-col gap-6 p-6 text-left md:mt-20 md:flex-row md:items-center md:gap-10 md:p-9`}
+          >
+            <div className="flex flex-1 flex-col gap-3">
+              <p className="text-xs font-semibold tracking-[1px] text-[#47D4AA]">
+                ALREADY INSTALLED?
+              </p>
+              <h3 id="demo-heading" className="text-[22px] font-bold tracking-[-0.3px] md:text-2xl">
+                Try it on our demo page
+              </h3>
+              <p className="text-[15px] leading-6 text-gray-400 md:text-base md:leading-[26px]">
+                We built a sample page full of intentional accessibility issues so you can see
+                Za11y in action.
+              </p>
+              <ol className="mt-1 flex flex-col gap-2.5 text-[15px] text-gray-200">
+                {demoSteps.map((step, i) => (
+                  <li key={step} className="flex items-start gap-3">
+                    <span
+                      aria-hidden
+                      className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#47D4AA]/14 text-xs font-bold text-[#47D4AA]"
+                    >
+                      {i + 1}
+                    </span>
+                    <span className="pt-0.5">{step}</span>
+                  </li>
+                ))}
+              </ol>
+            </div>
+            <GhostButton href="/demo" className="shrink-0">
+              Open the demo page
+            </GhostButton>
           </div>
         </section>
       </main>
