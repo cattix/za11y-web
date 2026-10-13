@@ -118,11 +118,13 @@ const comparison = [
 
 // Spacing system — mobile / tablet / desktop
 // Section padding: 64 / 96 / 112. Heading → content: 32 / 40 / 48. Card gaps: 16 / 24 / 24.
-// The hero and final CTA get extra room on purpose.
+// The hero and the bottom of the final CTA get extra room on purpose.
 const sectionX = "px-5 md:px-16 lg:px-28";
-const section = `${sectionX} py-16 md:py-24 lg:py-28`;
 const headingGap = "gap-8 md:gap-10 lg:gap-12";
 const cardGap = "gap-4 md:gap-6";
+// Card-grid sections end one card gap below their last row, so the visible gap to the
+// next section's heading is card gap + section padding (80 / 120 / 136).
+const sectionTight = `${sectionX} pt-16 pb-4 md:pt-24 md:pb-6 lg:pt-28`;
 
 const card = "rounded-[20px] border border-[#233047] bg-[#131C2E] md:rounded-3xl";
 
@@ -297,7 +299,7 @@ export default function RedesignPage() {
         <section
           id="features"
           aria-labelledby="features-heading"
-          className={`${sectionX} pt-16 pb-4 md:pt-24 md:pb-6 lg:pt-28`}
+          className={sectionTight}
         >
           <div className={`mx-auto flex max-w-[1216px] flex-col ${headingGap}`}>
             <div className="flex flex-col gap-2.5 lg:flex-row lg:items-end lg:justify-between">
@@ -407,7 +409,7 @@ export default function RedesignPage() {
         {/* Automated + manual */}
         <section
           aria-labelledby="compare-heading"
-          className={`bg-[#0F1726] ${section}`}
+          className={`bg-[#0F1726] ${sectionTight}`}
         >
           <div className={`mx-auto flex max-w-[1216px] flex-col md:items-center ${headingGap}`}>
             <h2
@@ -447,7 +449,7 @@ export default function RedesignPage() {
         {/* CTA */}
         <section
           aria-labelledby="cta-heading"
-          className="relative overflow-hidden px-5 py-20 text-center md:px-16 md:py-28 lg:py-34"
+          className="relative overflow-hidden px-5 pt-16 pb-20 text-center md:px-16 md:pt-24 md:pb-28 lg:pt-28 lg:pb-34"
         >
           <Glow className="top-0 left-1/2 h-[400px] w-[500px] -translate-x-1/2 md:h-[600px] md:w-[1100px]" />
           <div className="relative mx-auto flex max-w-[760px] flex-col items-center gap-4 md:gap-6">
