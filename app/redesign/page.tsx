@@ -65,9 +65,9 @@ function Glow({ className }: { className: string }) {
 }
 
 const severity = [
-  { label: "Serious 3", className: "bg-[#4A1D1D] text-[#FCA5A5]" },
-  { label: "Moderate 1", className: "bg-[#47391A] text-[#FCD34D]" },
-  { label: "Minor 1", className: "bg-[#1E2A4A] text-[#93C5FD]" },
+  { label: "Serious 3", className: "bg-[#FEE2E2] text-[#991B1B]" },
+  { label: "Moderate 1", className: "bg-[#FEF3C7] text-[#92400E]" },
+  { label: "Minor 1", className: "bg-[#DBEAFE] text-[#1E40AF]" },
 ];
 
 const audience = [
@@ -233,9 +233,14 @@ export default function RedesignPage() {
               <div
                 role="img"
                 aria-label="Scan complete: 5 issues — 3 serious, 1 moderate, 1 minor"
-                className={`${card} absolute bottom-6 left-0 flex flex-col gap-2 rounded-[14px] px-3.5 py-3 shadow-[0_16px_40px_rgba(0,0,0,0.45)] md:bottom-0 md:rounded-2xl md:px-[18px] md:py-4`}
+                className="absolute bottom-6 left-0 flex flex-col gap-2.5 rounded-[14px] bg-white px-3.5 py-3 text-gray-900 shadow-[0_24px_48px_rgba(0,0,0,0.55)] md:bottom-0 md:rounded-2xl md:px-[18px] md:py-4"
               >
-                <p className="text-[13px] font-semibold md:text-sm">Scan complete · 5 issues</p>
+                <p className="flex items-center gap-2 text-[13px] font-semibold md:text-sm">
+                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#47D4AA]">
+                    <Check aria-hidden className="h-3 w-3 text-[#0B1220]" strokeWidth={3} />
+                  </span>
+                  Scan complete · 5 issues
+                </p>
                 <div className="flex gap-1.5 md:gap-2">
                   {severity.map((s) => (
                     <span
