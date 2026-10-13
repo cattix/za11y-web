@@ -134,21 +134,25 @@ function MockupCard({
   alt: string;
 }) {
   return (
-    <article className={`${card} flex flex-col overflow-hidden px-6 pt-6 md:px-9 md:pt-9`}>
-      <p className="text-xs font-semibold tracking-[1px] text-[#47D4AA]">{eyebrow}</p>
-      <h3 className="mt-2.5 text-[22px] font-bold tracking-[-0.3px] md:mt-3 md:text-[26px]">
-        {title}
-      </h3>
-      <p className="mt-2.5 text-[15px] leading-6 text-gray-400 md:mt-3 md:text-base md:leading-[26px]">
-        {description}
-      </p>
-      <img
-        src={image}
-        alt={alt}
-        width={700}
-        height={600}
-        className="mt-6 w-full rounded-t-xl md:mt-8 md:rounded-t-[14px]"
-      />
+    <article className={`${card} flex min-w-0 flex-1 flex-col overflow-hidden px-6 pt-6 md:px-9 md:pt-9`}>
+      <div className="flex-1 pb-6 md:pb-8">
+        <p className="text-xs font-semibold tracking-[1px] text-[#47D4AA]">{eyebrow}</p>
+        <h3 className="mt-2.5 text-[22px] font-bold tracking-[-0.3px] md:mt-3 md:text-[26px]">
+          {title}
+        </h3>
+        <p className="mt-2.5 text-[15px] leading-6 text-gray-400 md:mt-3 md:text-base md:leading-[26px]">
+          {description}
+        </p>
+      </div>
+      <div className="aspect-[7/5] w-full overflow-hidden rounded-t-xl md:rounded-t-[14px]">
+        <img
+          src={image}
+          alt={alt}
+          width={700}
+          height={600}
+          className="h-full w-full object-cover object-top"
+        />
+      </div>
     </article>
   );
 }
@@ -299,13 +303,15 @@ export default function RedesignPage() {
                   id="features-heading"
                   className="text-[30px] leading-9 font-bold tracking-[-0.8px] md:text-5xl md:leading-14 md:tracking-[-1.2px]"
                 >
-                  Clear, actionable testing
-                  <br className="hidden md:block" /> in one side panel
+                  <span className="whitespace-nowrap">Find issues.</span>{" "}
+                  <span className="whitespace-nowrap">Understand them.</span>
+                  <br className="hidden lg:block" />{" "}
+                  <span className="whitespace-nowrap">Verify accessibility.</span>
                 </h2>
               </div>
-              <p className="text-base leading-[25px] text-gray-400 md:text-lg md:leading-[29px] lg:w-[440px]">
-                From automated WCAG testing to guided manual reviews — identify issues,
-                understand their impact, and find exactly where they are.
+              <p className="text-base leading-[25px] text-gray-400 md:text-lg md:leading-[29px] lg:w-[420px]">
+                Run automated WCAG scans, explore detailed results, and complete guided
+                manual checks without leaving the page you’re testing.
               </p>
             </div>
 
@@ -313,9 +319,9 @@ export default function RedesignPage() {
               {/* Row 1 */}
               <div className="flex flex-col gap-4 md:gap-5 lg:flex-row">
                 <article
-                  className={`${card} flex flex-1 flex-col overflow-hidden pt-6 pl-6 md:pt-9 md:pl-9 lg:flex-row lg:items-end lg:gap-8`}
+                  className={`${card} flex flex-1 flex-col overflow-hidden pt-6 pl-6 md:pt-9 md:pl-9 xl:flex-row xl:items-end xl:gap-7`}
                 >
-                  <div className="pr-6 pb-0 md:pr-9 lg:w-[360px] lg:shrink-0 lg:self-start lg:pr-0 lg:pb-9">
+                  <div className="pr-6 pb-0 md:pr-9 xl:w-[340px] xl:shrink-0 xl:self-start xl:pr-0 xl:pb-9">
                     <p className="text-xs font-semibold tracking-[1px] text-[#47D4AA]">01 SCAN</p>
                     <h3 className="mt-2.5 text-[22px] font-bold tracking-[-0.3px] md:mt-3 md:text-[26px]">
                       Filter by standards
@@ -325,19 +331,21 @@ export default function RedesignPage() {
                       project — scan against all of them, or focus on specific requirements.
                     </p>
                   </div>
-                  <img
-                    src="/assets/za11y-feature-filter-mockup.png"
-                    alt="Za11y WCAG standards dropdown with versions 2.0 through 2.2 and levels A to AAA selected"
-                    width={700}
-                    height={600}
-                    className="mt-6 w-full rounded-tl-xl md:mt-8 lg:mt-0 lg:w-[420px] lg:rounded-tl-[14px]"
-                  />
+                  <div className="mt-6 overflow-hidden rounded-tl-xl md:mt-8 md:rounded-tl-[14px] xl:mt-0 xl:min-w-0 xl:flex-1">
+                    <img
+                      src="/assets/za11y-feature-filter-mockup.png"
+                      alt="Za11y WCAG standards dropdown with versions 2.0 through 2.2 and levels A to AAA selected"
+                      width={700}
+                      height={600}
+                      className="w-full xl:w-[440px] xl:max-w-none"
+                    />
+                  </div>
                 </article>
                 <article className="flex flex-col justify-between gap-3.5 rounded-[20px] bg-gradient-to-r from-[#47D4AA] to-[#8CE2C8] p-6 text-[#0B1220] md:rounded-3xl md:p-9 lg:w-[380px]">
                   <p className="text-xs font-bold tracking-[1px] md:text-[13px]">
                     PRIVATE BY DESIGN
                   </p>
-                  <div className="flex flex-col gap-2.5 md:gap-3">
+                  <div className="flex flex-col gap-2.5 md:gap-3 lg:mb-12">
                     <h3 className="text-2xl leading-[29px] font-bold tracking-[-0.4px] md:text-[32px] md:leading-[38px] md:tracking-[-0.6px]">
                       No accounts. No uploads. Just scan.
                     </h3>
