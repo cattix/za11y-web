@@ -127,7 +127,7 @@ const cardGap = "gap-4 md:gap-6";
 // next section's heading is card gap + section padding (80 / 120 / 136).
 const sectionTight = `${sectionX} pt-16 pb-4 md:pt-24 md:pb-6 lg:pt-28`;
 
-const card = "rounded-[20px] border border-[#233047] bg-[#131C2E] md:rounded-3xl";
+const card = "rounded-[20px] border border-white/10 bg-[#313131] md:rounded-3xl";
 
 function MockupCard({
   eyebrow,
@@ -149,7 +149,7 @@ function MockupCard({
         <h3 className="mt-2.5 text-[22px] font-bold tracking-[-0.3px] md:mt-3 md:text-[26px]">
           {title}
         </h3>
-        <p className="mt-2.5 text-[15px] leading-6 text-gray-400 md:mt-3 md:text-base md:leading-[26px]">
+        <p className="mt-2.5 text-[15px] leading-6 text-[#F2F0ED]/60 md:mt-3 md:text-base md:leading-[26px]">
           {description}
         </p>
       </div>
@@ -174,7 +174,7 @@ export default function RedesignPage({
 }) {
   const isVideo = heroMedia === "video";
   return (
-    <div className="min-h-screen bg-[#0B1220] text-gray-50">
+    <div className="min-h-screen bg-[#282828] text-gray-50">
       <a
         href="#main"
         className={`sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:rounded-lg focus:bg-[#47D4AA] focus:px-4 focus:py-2 focus:font-semibold focus:text-[#0B1220] ${focusRing}`}
@@ -183,7 +183,7 @@ export default function RedesignPage({
       </a>
 
       {/* Nav */}
-      <header className="sticky top-0 z-50 border-b border-transparent bg-[#0B1220]/85 backdrop-blur">
+      <header className="sticky top-0 z-50 border-b border-transparent bg-[#282828]/85 backdrop-blur">
         <nav
           aria-label="Main"
           className="flex h-16 items-center justify-between px-5 md:h-20 md:px-16"
@@ -200,7 +200,7 @@ export default function RedesignPage({
           <div className="flex items-center gap-7">
             <Link
               href="/privacy-policy"
-              className={`hidden rounded text-[15px] font-medium text-[#C7CDD6] hover:text-white md:inline ${focusRing}`}
+              className={`hidden rounded text-[15px] font-medium text-[#F2F0ED]/80 hover:text-[#F2F0ED] md:inline ${focusRing}`}
             >
               Privacy Policy
             </Link>
@@ -239,7 +239,7 @@ export default function RedesignPage({
                 </span>
               </h1>
               <p
-                className={`text-[17px] leading-[27px] text-[#C7CDD6] md:text-xl md:leading-8 ${
+                className={`text-[17px] leading-[27px] text-[#F2F0ED]/80 md:text-xl md:leading-8 ${
                   isVideo ? "xl:my-2 xl:text-base xl:leading-[26px]" : ""
                 }`}
               >
@@ -250,7 +250,7 @@ export default function RedesignPage({
                 <PrimaryButton>Get Za11y for Free</PrimaryButton>
               </div>
               <ul
-                className={`flex flex-wrap items-center gap-x-2.5 gap-y-1 text-[13px] text-gray-400 md:text-sm ${
+                className={`flex flex-wrap items-center gap-x-2.5 gap-y-1 text-[13px] text-[#F2F0ED]/60 md:text-sm ${
                   isVideo ? "xl:text-[13px]" : ""
                 }`}
               >
@@ -307,12 +307,12 @@ export default function RedesignPage({
         {/* Audience */}
         <section
           aria-labelledby="audience-heading"
-          className={`border-y border-[#233047] py-6 md:py-7 ${sectionX}`}
+          className={`border-y border-white/10 py-6 md:py-7 ${sectionX}`}
         >
           <div className="mx-auto flex max-w-[1216px] flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
             <h2
               id="audience-heading"
-              className="text-[13px] font-medium text-gray-400 md:text-[15px]"
+              className="text-[13px] font-medium text-[#F2F0ED]/60 md:text-[15px]"
             >
               Built for the whole product team
             </h2>
@@ -320,7 +320,7 @@ export default function RedesignPage({
               {audience.map((a) => (
                 <li
                   key={a}
-                  className="rounded-full border border-[#233047] px-3 py-1.5 text-sm font-semibold text-gray-200 lg:border-0 lg:p-0 lg:text-[17px]"
+                  className="rounded-full border border-white/10 px-3 py-1.5 text-sm font-semibold text-[#F2F0ED]/90 lg:border-0 lg:p-0 lg:text-[17px]"
                 >
                   {a}
                 </li>
@@ -351,7 +351,7 @@ export default function RedesignPage({
                   <span className="whitespace-nowrap">Verify accessibility.</span>
                 </h2>
               </div>
-              <p className="text-base leading-[25px] text-gray-400 md:text-lg md:leading-[29px] lg:w-[420px]">
+              <p className="text-base leading-[25px] text-[#F2F0ED]/60 md:text-lg md:leading-[29px] lg:w-[420px]">
                 Run automated WCAG scans, explore detailed results, and complete guided
                 manual checks without leaving the page you’re testing.
               </p>
@@ -368,7 +368,7 @@ export default function RedesignPage({
                     <h3 className="mt-2.5 text-[22px] font-bold tracking-[-0.3px] md:mt-3 md:text-[26px]">
                       Filter by standards
                     </h3>
-                    <p className="mt-2.5 text-[15px] leading-6 text-gray-400 md:mt-3 md:text-base md:leading-[26px]">
+                    <p className="mt-2.5 text-[15px] leading-6 text-[#F2F0ED]/60 md:mt-3 md:text-base md:leading-[26px]">
                       Choose the WCAG versions and conformance levels that matter to your
                       project — scan against all of them, or focus on specific requirements.
                     </p>
@@ -429,7 +429,7 @@ export default function RedesignPage({
                     </span>
                     <div className="flex flex-col gap-1 lg:gap-2.5">
                       <h3 className="text-base font-bold md:text-[19px]">{f.title}</h3>
-                      <p className="text-sm leading-[21px] text-gray-400 md:text-[15px] md:leading-6">
+                      <p className="text-sm leading-[21px] text-[#F2F0ED]/60 md:text-[15px] md:leading-6">
                         {f.description}
                       </p>
                     </div>
@@ -443,7 +443,7 @@ export default function RedesignPage({
         {/* Automated + manual */}
         <section
           aria-labelledby="compare-heading"
-          className={`bg-[#0F1726] ${sectionTight}`}
+          className={`bg-[#1F1F1F] ${sectionTight}`}
         >
           <div className={`mx-auto flex max-w-[1216px] flex-col md:items-center ${headingGap}`}>
             <h2
@@ -457,7 +457,7 @@ export default function RedesignPage({
               {comparison.map((c) => (
                 <div
                   key={c.title}
-                  className="flex flex-1 flex-col gap-3 rounded-[20px] border border-[#233047] bg-[#131C2E] p-[22px] md:gap-5 md:rounded-3xl md:p-8"
+                  className="flex flex-1 flex-col gap-3 rounded-[20px] border border-white/10 bg-[#313131] p-[22px] md:gap-5 md:rounded-3xl md:p-8"
                 >
                   <div className="flex flex-col-reverse gap-1 md:flex-row md:items-center md:justify-between">
                     <h3 className="text-[19px] font-bold md:text-2xl">{c.title}</h3>
@@ -467,7 +467,7 @@ export default function RedesignPage({
                     {c.items.map((item) => (
                       <li
                         key={item}
-                        className="flex items-center gap-2.5 border-t border-[#233047] py-2.5 text-[15px] text-gray-200 md:gap-3 md:py-3 md:text-[17px]"
+                        className="flex items-center gap-2.5 border-t border-white/10 py-2.5 text-[15px] text-[#F2F0ED]/90 md:gap-3 md:py-3 md:text-[17px]"
                       >
                         <Check aria-hidden className="h-4 w-4 shrink-0 text-[#47D4AA] md:h-[18px] md:w-[18px]" strokeWidth={2.5} />
                         {item}
@@ -493,7 +493,7 @@ export default function RedesignPage({
             >
               Ship <span className="text-[#47D4AA]">accessible</span> experiences.
             </h2>
-            <p className="max-w-[620px] text-base leading-[25px] text-[#C7CDD6] md:text-xl md:leading-[30px]">
+            <p className="max-w-[620px] text-base leading-[25px] text-[#F2F0ED]/80 md:text-xl md:leading-[30px]">
               Install Za11y in seconds and run your first scan on the page you’re already
               looking at.
             </p>
@@ -517,11 +517,11 @@ export default function RedesignPage({
               <h3 id="demo-heading" className="text-[22px] font-bold tracking-[-0.3px] md:text-2xl">
                 Try it on our demo page
               </h3>
-              <p className="text-[15px] leading-6 text-gray-400 md:text-base md:leading-[26px]">
+              <p className="text-[15px] leading-6 text-[#F2F0ED]/60 md:text-base md:leading-[26px]">
                 We built a sample page full of intentional accessibility issues so you can see
                 Za11y in action.
               </p>
-              <ol className="mt-1 flex flex-col gap-2.5 text-[15px] text-gray-200">
+              <ol className="mt-1 flex flex-col gap-2.5 text-[15px] text-[#F2F0ED]/90">
                 {demoSteps.map((step, i) => (
                   <li key={step} className="flex items-start gap-3">
                     <span
@@ -543,7 +543,7 @@ export default function RedesignPage({
       </main>
 
       {/* Footer */}
-      <footer className={`border-t border-[#233047] py-8 md:py-10 ${sectionX}`}>
+      <footer className={`border-t border-white/10 py-8 md:py-10 ${sectionX}`}>
         <div className="mx-auto flex max-w-[1216px] flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <img
             src="/assets/za11y-cat-logo.svg"
@@ -552,22 +552,22 @@ export default function RedesignPage({
             height={48}
             className="h-[29px] w-auto self-start md:h-[34px] md:self-auto"
           />
-          <p className="order-last text-[13px] text-gray-400 md:order-none md:text-sm">
+          <p className="order-last text-[13px] text-[#F2F0ED]/60 md:order-none md:text-sm">
             © 2026 Za11y · Instantly uncover WCAG accessibility issues
           </p>
-          <ul className="flex gap-5 text-sm text-[#C7CDD6] md:gap-7">
+          <ul className="flex gap-5 text-sm text-[#F2F0ED]/80 md:gap-7">
             <li>
-              <a href={CHROME_STORE_URL} target="_blank" rel="noopener noreferrer" className={`rounded hover:text-white ${focusRing}`}>
+              <a href={CHROME_STORE_URL} target="_blank" rel="noopener noreferrer" className={`rounded hover:text-[#F2F0ED] ${focusRing}`}>
                 Chrome Web Store
               </a>
             </li>
             <li>
-              <Link href="/demo" className={`rounded hover:text-white ${focusRing}`}>
+              <Link href="/demo" className={`rounded hover:text-[#F2F0ED] ${focusRing}`}>
                 Demo
               </Link>
             </li>
             <li>
-              <Link href="/privacy-policy" className={`rounded hover:text-white ${focusRing}`}>
+              <Link href="/privacy-policy" className={`rounded hover:text-[#F2F0ED] ${focusRing}`}>
                 Privacy Policy
               </Link>
             </li>
