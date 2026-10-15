@@ -27,8 +27,17 @@ export default function HeroVideo() {
         loop
         muted
         playsInline
+        aria-label="Demo: scanning a page for accessibility issues with the Za11y Chrome extension"
         className="w-full h-auto rounded-2xl shadow-[0px_1px_14px_0px_rgba(0,0,0,0.15),0px_2px_5px_2px_rgba(0,0,0,0.05)]"
-      />
+      >
+        {/* Silent video: captions describe what happens on screen (WCAG 1.2.1 / 1.2.2) */}
+        <track
+          kind="captions"
+          src="/assets/za11y-hero-how-to-1.vtt"
+          srcLang="en"
+          label="English"
+        />
+      </video>
       <button
         onClick={toggle}
         aria-label={playing ? "Pause video" : "Play video"}

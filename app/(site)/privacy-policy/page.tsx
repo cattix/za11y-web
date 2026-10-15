@@ -14,14 +14,14 @@ export default function PrivacyPolicy() {
             <h1 className="text-3xl font-bold text-gray-900 mb-1">
               Privacy Policy
             </h1>
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-gray-700">
               Za11y &mdash; Last updated: March 2026
             </p>
           </header>
 
           {/* Summary box */}
           <div className="bg-[#f0fdf4] border border-[#bbf7d0] rounded-lg px-5 py-4 mb-10">
-            <p className="text-[#166534] font-medium">
+            <p className="text-[#14532D] font-medium">
               This extension does not collect, transmit, or share any personal
               data or browsing data. All processing happens locally in your
               browser.
@@ -41,7 +41,7 @@ export default function PrivacyPolicy() {
                   href="https://github.com/dequelabs/axe-core"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-600 hover:underline"
+                  className="text-blue-800 underline hover:no-underline"
                 >
                   axe-core
                 </a>
@@ -162,7 +162,7 @@ export default function PrivacyPolicy() {
                   href="https://github.com/dequelabs/axe-core"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-600 hover:underline"
+                  className="text-blue-800 underline hover:no-underline"
                 >
                   axe-core
                 </a>{" "}
@@ -200,7 +200,7 @@ export default function PrivacyPolicy() {
                   href="https://github.com/ivstudio/za11y/issues"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-600 hover:underline"
+                  className="text-blue-800 underline hover:no-underline"
                 >
                   GitHub
                 </a>
@@ -210,14 +210,14 @@ export default function PrivacyPolicy() {
           </div>
 
           {/* Footer */}
-          <footer className="mt-12 pt-6 border-t border-gray-200 text-sm text-gray-500">
+          <footer className="mt-12 pt-6 border-t border-gray-200 text-sm text-gray-700">
             <p>
               Za11y &mdash;{" "}
               <a
                 href="https://github.com/ivstudio/za11y"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 hover:underline"
+                className="text-blue-800 underline hover:no-underline"
               >
                 github.com/ivstudio/za11y
               </a>

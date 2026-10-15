@@ -50,15 +50,6 @@ function GhostButton({
 
 const heroPoints = ["Powered by axe-core", "No account", "Data stays in your browser"];
 
-function Glow({ className }: { className: string }) {
-  return (
-    <div
-      aria-hidden
-      className={`pointer-events-none absolute rounded-full bg-[radial-gradient(closest-side,rgba(71,212,170,0.22),rgba(71,212,170,0))] ${className}`}
-    />
-  );
-}
-
 const demoSteps = [
   "Open the demo page in Chrome.",
   "Click the Za11y icon in your toolbar to open the side panel.",
@@ -66,8 +57,8 @@ const demoSteps = [
 ];
 
 const severity = [
-  { label: "Serious 3", className: "bg-[#FEE2E2] text-[#991B1B]" },
-  { label: "Moderate 1", className: "bg-[#FEF3C7] text-[#92400E]" },
+  { label: "Serious 3", className: "bg-[#FEE2E2] text-[#7F1D1D]" },
+  { label: "Moderate 1", className: "bg-[#FEF3C7] text-[#78350F]" },
   { label: "Minor 1", className: "bg-[#DBEAFE] text-[#1E40AF]" },
 ];
 
@@ -145,11 +136,11 @@ function MockupCard({
   return (
     <article className={`${card} flex min-w-0 flex-1 flex-col overflow-hidden px-6 pt-6 md:px-9 md:pt-9`}>
       <div className="flex-1 pb-6 md:pb-8">
-        <p className="text-xs font-semibold tracking-[1px] text-[#47D4AA]">{eyebrow}</p>
+        <p className="text-xs font-semibold tracking-[1px] text-[#56DBB3]">{eyebrow}</p>
         <h3 className="mt-2.5 text-[22px] font-bold tracking-[-0.3px] md:mt-3 md:text-[26px]">
           {title}
         </h3>
-        <p className="mt-2.5 text-[15px] leading-6 text-[#F2F0ED]/60 md:mt-3 md:text-base md:leading-[26px]">
+        <p className="mt-2.5 text-[15px] leading-6 text-[#F2F0ED]/80 md:mt-3 md:text-base md:leading-[26px]">
           {description}
         </p>
       </div>
@@ -183,7 +174,7 @@ export default function RedesignPage({
       </a>
 
       {/* Nav */}
-      <header className="sticky top-0 z-50 border-b border-transparent bg-[#282828]/85 backdrop-blur">
+      <header className="sticky top-0 z-50 bg-[#282828]">
         <nav
           aria-label="Main"
           className="flex h-16 items-center justify-between px-5 md:h-20 md:px-16"
@@ -217,15 +208,14 @@ export default function RedesignPage({
         {/* The video variant gives the video more room: side-by-side only from xl, with a
             narrower text column and smaller type; below xl the video spans the full width. */}
         <section className="relative overflow-hidden px-5 pt-10 pb-20 md:px-16 md:pt-22 md:pb-28 lg:pb-32 lg:pl-28">
-          <Glow className="-left-15 top-75 h-[520px] w-[520px] md:top-[-220px] md:left-auto md:right-[-160px] md:h-[900px] md:w-[900px]" />
           <div
             className={`relative mx-auto flex max-w-[1264px] flex-col gap-10 ${
-              isVideo ? "md:gap-14 xl:flex-row xl:items-center xl:gap-12" : "lg:flex-row lg:items-center lg:gap-16"
+              isVideo ? "md:gap-14 xl:flex-row xl:items-center xl:gap-12" : "xl:flex-row xl:items-center xl:gap-16"
             }`}
           >
             <div
               className={`flex flex-col gap-5 md:gap-7 ${
-                isVideo ? "xl:w-[460px] xl:shrink-0 xl:gap-6" : "lg:w-[620px] lg:shrink-0"
+                isVideo ? "xl:w-[460px] xl:shrink-0 xl:gap-6" : "xl:w-[620px] xl:shrink-0"
               }`}
             >
               <h1
@@ -234,7 +224,7 @@ export default function RedesignPage({
                 }`}
               >
                 Catch accessibility issues{" "}
-                <span className="text-[#47D4AA]">
+                <span className="text-[#56DBB3]">
                   before <span className="whitespace-nowrap">they ship.</span>
                 </span>
               </h1>
@@ -250,7 +240,7 @@ export default function RedesignPage({
                 <PrimaryButton>Get Za11y for Free</PrimaryButton>
               </div>
               <ul
-                className={`flex flex-wrap items-center gap-x-2.5 gap-y-1 text-[13px] text-[#F2F0ED]/60 md:text-sm ${
+                className={`flex flex-wrap items-center gap-x-2.5 gap-y-1 text-[13px] text-[#F2F0ED]/80 md:text-sm ${
                   isVideo ? "xl:text-[13px]" : ""
                 }`}
               >
@@ -269,7 +259,7 @@ export default function RedesignPage({
                 <HeroVideo />
               </div>
             ) : (
-              <div className="relative mx-auto w-full max-w-[600px] pb-24 pl-5 md:pb-10 md:pl-10 lg:mx-0">
+              <div className="relative mx-auto w-full max-w-[600px] xl:mx-0">
                 <img
                   src="/assets/za11y-feature-issues-mockup.png"
                   alt="Za11y issues panel listing color contrast issues grouped by severity, with details for the selected issue"
@@ -280,7 +270,7 @@ export default function RedesignPage({
                 <div
                   role="img"
                   aria-label="Scan complete: 5 issues — 3 serious, 1 moderate, 1 minor"
-                  className="absolute bottom-6 left-0 flex flex-col gap-2.5 rounded-[14px] bg-white px-3.5 py-3 text-gray-900 shadow-[0_24px_48px_rgba(0,0,0,0.55)] md:bottom-0 md:rounded-2xl md:px-[18px] md:py-4"
+                  className="absolute bottom-3 left-3 flex max-w-[calc(100%-1.5rem)] flex-col gap-2.5 rounded-[14px] bg-white px-3.5 py-3 text-gray-900 shadow-[0_24px_48px_rgba(0,0,0,0.55)] md:bottom-6 md:left-6 md:rounded-2xl md:px-[18px] md:py-4"
                 >
                   <p className="flex items-center gap-2 text-[13px] font-semibold md:text-sm">
                     <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#47D4AA]">
@@ -288,7 +278,7 @@ export default function RedesignPage({
                     </span>
                     Scan complete · 5 issues
                   </p>
-                  <div className="flex gap-1.5 md:gap-2">
+                  <div className="flex flex-wrap gap-1.5 md:gap-2">
                     {severity.map((s) => (
                       <span
                         key={s.label}
@@ -312,7 +302,7 @@ export default function RedesignPage({
           <div className="mx-auto flex max-w-[1216px] flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
             <h2
               id="audience-heading"
-              className="text-[13px] font-medium text-[#F2F0ED]/60 md:text-[15px]"
+              className="text-[13px] font-medium text-[#F2F0ED]/80 md:text-[15px]"
             >
               Built for the whole product team
             </h2>
@@ -338,7 +328,7 @@ export default function RedesignPage({
           <div className={`mx-auto flex max-w-[1216px] flex-col ${headingGap}`}>
             <div className="flex flex-col gap-2.5 lg:flex-row lg:items-end lg:justify-between">
               <div className="flex flex-col gap-2.5 md:gap-3.5">
-                <p className="text-xs font-semibold tracking-[1.2px] text-[#47D4AA] md:text-sm">
+                <p className="text-xs font-semibold tracking-[1.2px] text-[#56DBB3] md:text-sm">
                   {"// FEATURES"}
                 </p>
                 <h2
@@ -351,7 +341,7 @@ export default function RedesignPage({
                   <span className="whitespace-nowrap">Verify accessibility.</span>
                 </h2>
               </div>
-              <p className="text-base leading-[25px] text-[#F2F0ED]/60 md:text-lg md:leading-[29px] lg:w-[420px]">
+              <p className="text-base leading-[25px] text-[#F2F0ED]/80 md:text-lg md:leading-[29px] lg:w-[420px]">
                 Run automated WCAG scans, explore detailed results, and complete guided
                 manual checks without leaving the page you’re testing.
               </p>
@@ -364,11 +354,11 @@ export default function RedesignPage({
                   className={`${card} flex flex-1 flex-col overflow-hidden pt-6 pl-6 md:pt-9 md:pl-9 xl:flex-row xl:items-end xl:gap-7`}
                 >
                   <div className="pr-6 pb-0 md:pr-9 xl:w-[340px] xl:shrink-0 xl:self-start xl:pr-0 xl:pb-9">
-                    <p className="text-xs font-semibold tracking-[1px] text-[#47D4AA]">01 SCAN</p>
+                    <p className="text-xs font-semibold tracking-[1px] text-[#56DBB3]">01 SCAN</p>
                     <h3 className="mt-2.5 text-[22px] font-bold tracking-[-0.3px] md:mt-3 md:text-[26px]">
                       Filter by standards
                     </h3>
-                    <p className="mt-2.5 text-[15px] leading-6 text-[#F2F0ED]/60 md:mt-3 md:text-base md:leading-[26px]">
+                    <p className="mt-2.5 text-[15px] leading-6 text-[#F2F0ED]/80 md:mt-3 md:text-base md:leading-[26px]">
                       Choose the WCAG versions and conformance levels that matter to your
                       project — scan against all of them, or focus on specific requirements.
                     </p>
@@ -383,7 +373,7 @@ export default function RedesignPage({
                     />
                   </div>
                 </article>
-                <article className="flex flex-col justify-between gap-3.5 rounded-[20px] bg-gradient-to-r from-[#47D4AA] to-[#8CE2C8] p-6 text-[#0B1220] md:rounded-3xl md:p-9 lg:w-[380px]">
+                <article className="flex flex-col justify-between gap-3.5 rounded-[20px] bg-[#47D4AA] p-6 text-[#0B1220] md:rounded-3xl md:p-9 lg:w-[380px]">
                   <p className="text-xs font-bold tracking-[1px] md:text-[13px]">
                     PRIVATE BY DESIGN
                   </p>
@@ -425,11 +415,11 @@ export default function RedesignPage({
                     className={`${card} flex flex-1 gap-3.5 p-[18px] md:rounded-[20px] md:p-7 lg:flex-col lg:gap-2.5`}
                   >
                     <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[10px] bg-[#47D4AA]/14 md:h-10 md:w-10">
-                      <Check aria-hidden className="h-[18px] w-[18px] text-[#47D4AA]" strokeWidth={2.5} />
+                      <Check aria-hidden className="h-[18px] w-[18px] text-[#56DBB3]" strokeWidth={2.5} />
                     </span>
                     <div className="flex flex-col gap-1 lg:gap-2.5">
                       <h3 className="text-base font-bold md:text-[19px]">{f.title}</h3>
-                      <p className="text-sm leading-[21px] text-[#F2F0ED]/60 md:text-[15px] md:leading-6">
+                      <p className="text-sm leading-[21px] text-[#F2F0ED]/80 md:text-[15px] md:leading-6">
                         {f.description}
                       </p>
                     </div>
@@ -461,7 +451,7 @@ export default function RedesignPage({
                 >
                   <div className="flex flex-col-reverse gap-1 md:flex-row md:items-center md:justify-between">
                     <h3 className="text-[19px] font-bold md:text-2xl">{c.title}</h3>
-                    <p className="text-xs font-medium text-[#47D4AA] md:text-sm">{c.tag}</p>
+                    <p className="text-xs font-medium text-[#56DBB3] md:text-sm">{c.tag}</p>
                   </div>
                   <ul>
                     {c.items.map((item) => (
@@ -469,7 +459,7 @@ export default function RedesignPage({
                         key={item}
                         className="flex items-center gap-2.5 border-t border-white/10 py-2.5 text-[15px] text-[#F2F0ED]/90 md:gap-3 md:py-3 md:text-[17px]"
                       >
-                        <Check aria-hidden className="h-4 w-4 shrink-0 text-[#47D4AA] md:h-[18px] md:w-[18px]" strokeWidth={2.5} />
+                        <Check aria-hidden className="h-4 w-4 shrink-0 text-[#56DBB3] md:h-[18px] md:w-[18px]" strokeWidth={2.5} />
                         {item}
                       </li>
                     ))}
@@ -485,13 +475,12 @@ export default function RedesignPage({
           aria-labelledby="cta-heading"
           className="relative overflow-hidden px-5 pt-16 pb-20 text-center md:px-16 md:pt-24 md:pb-28 lg:pt-28 lg:pb-34"
         >
-          <Glow className="top-0 left-1/2 h-[400px] w-[500px] -translate-x-1/2 md:h-[600px] md:w-[1100px]" />
           <div className="relative mx-auto flex max-w-[760px] flex-col items-center gap-4 md:gap-6">
             <h2
               id="cta-heading"
               className="text-[40px] leading-11 font-bold tracking-[-1.2px] md:text-[64px] md:leading-[70px] md:tracking-[-2px]"
             >
-              Ship <span className="text-[#47D4AA]">accessible</span> experiences.
+              Ship <span className="text-[#56DBB3]">accessible</span> experiences.
             </h2>
             <p className="max-w-[620px] text-base leading-[25px] text-[#F2F0ED]/80 md:text-xl md:leading-[30px]">
               Install Za11y in seconds and run your first scan on the page you’re already
@@ -511,25 +500,25 @@ export default function RedesignPage({
             className={`${card} relative mx-auto mt-14 flex max-w-[760px] flex-col gap-6 p-6 text-left md:mt-20 md:flex-row md:items-center md:gap-10 md:p-9`}
           >
             <div className="flex flex-1 flex-col gap-3">
-              <p className="text-xs font-semibold tracking-[1px] text-[#47D4AA]">
+              <p className="text-xs font-semibold tracking-[1px] text-[#56DBB3]">
                 ALREADY INSTALLED?
               </p>
               <h3 id="demo-heading" className="text-[22px] font-bold tracking-[-0.3px] md:text-2xl">
                 Try it on our demo page
               </h3>
-              <p className="text-[15px] leading-6 text-[#F2F0ED]/60 md:text-base md:leading-[26px]">
+              <p className="text-[15px] leading-6 text-[#F2F0ED]/80 md:text-base md:leading-[26px]">
                 We built a sample page full of intentional accessibility issues so you can see
                 Za11y in action.
               </p>
               <ol className="mt-1 flex flex-col gap-2.5 text-[15px] text-[#F2F0ED]/90">
                 {demoSteps.map((step, i) => (
                   <li key={step} className="flex items-start gap-3">
+                    {/* Number rendered via CSS so it isn't read twice alongside the <ol> numbering */}
                     <span
                       aria-hidden
-                      className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#47D4AA]/14 text-xs font-bold text-[#47D4AA]"
-                    >
-                      {i + 1}
-                    </span>
+                      data-step={i + 1}
+                      className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#47D4AA]/14 text-xs font-bold text-[#56DBB3] before:content-[attr(data-step)]"
+                    />
                     <span className="pt-0.5">{step}</span>
                   </li>
                 ))}
@@ -552,7 +541,7 @@ export default function RedesignPage({
             height={48}
             className="h-[29px] w-auto self-start md:h-[34px] md:self-auto"
           />
-          <p className="order-last text-[13px] text-[#F2F0ED]/60 md:order-none md:text-sm">
+          <p className="order-last text-[13px] text-[#F2F0ED]/80 md:order-none md:text-sm">
             © 2026 Za11y · Instantly uncover WCAG accessibility issues
           </p>
           <ul className="flex gap-5 text-sm text-[#F2F0ED]/80 md:gap-7">

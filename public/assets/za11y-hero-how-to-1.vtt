@@ -1,0 +1,19 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:03.500
+[No audio] The Za11y demo page is open in Chrome.
+
+00:00:03.500 --> 00:00:06.000
+The Za11y icon in the toolbar is clicked and the side panel opens.
+
+00:00:06.000 --> 00:00:08.000
+"Run Accessibility Scan" is selected.
+
+00:00:08.000 --> 00:00:12.000
+Results appear: 14 critical, 31 serious and 2 moderate issues.
+
+00:00:12.000 --> 00:00:16.000
+Selecting "Buttons must have discernible text" shows how to fix it and highlights the button on the page.
+
+00:00:16.000 --> 00:00:20.250
+More issues are reviewed in the Issues list.
