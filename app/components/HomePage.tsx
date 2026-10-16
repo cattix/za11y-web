@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { Check } from "lucide-react";
 import Link from "next/link";
-import HeroVideo from "../components/HeroVideo";
+import HeroVideo from "./HeroVideo";
 
 const CHROME_STORE_URL =
   "https://chromewebstore.google.com/detail/za11y/jckcbiebopjcodmdigkajekpkohnjegg";

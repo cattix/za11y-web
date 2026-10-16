@@ -1,4 +1,4 @@
-import RedesignPage from "./RedesignPage";
+import HomePage from "./components/HomePage";
 
 export const metadata = {
   title: "Za11y — Catch accessibility issues before they ship",
@@ -7,5 +7,5 @@ export const metadata = {
 };
 
 export default function Page() {
-  return <RedesignPage heroMedia="mockup" />;
+  return <HomePage heroMedia="video" />;
 }
