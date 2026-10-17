@@ -57,9 +57,9 @@ const demoSteps = [
 ];
 
 const severity = [
-  { label: "Serious 3", className: "bg-[#FEE2E2] text-[#7F1D1D]" },
-  { label: "Moderate 1", className: "bg-[#FEF3C7] text-[#78350F]" },
-  { label: "Minor 1", className: "bg-[#DBEAFE] text-[#1E40AF]" },
+  { label: "Serious 3", className: "bg-[#4A1D1D] text-[#FCA5A5]" },
+  { label: "Moderate 1", className: "bg-[#47391A] text-[#FCD34D]" },
+  { label: "Minor 1", className: "bg-[#1E2A4A] text-[#93C5FD]" },
 ];
 
 const audience = [
@@ -114,11 +114,10 @@ const comparison = [
 const sectionX = "px-5 md:px-16 lg:px-28";
 const headingGap = "gap-8 md:gap-10 lg:gap-12";
 const cardGap = "gap-4 md:gap-6";
-// Card-grid sections end one card gap below their last row, so the visible gap to the
-// next section's heading is card gap + section padding (80 / 120 / 136).
-const sectionTight = `${sectionX} pt-16 pb-4 md:pt-24 md:pb-6 lg:pt-28`;
 
 const card = "rounded-[20px] border border-white/10 bg-[#313131] md:rounded-3xl";
+// Features sit on a light band, so their cards are white
+const lightCard = "rounded-[20px] border border-[#E3E1DC] bg-white text-[#1F1F1F] md:rounded-3xl";
 
 function MockupCard({
   eyebrow,
@@ -134,13 +133,13 @@ function MockupCard({
   alt: string;
 }) {
   return (
-    <article className={`${card} flex min-w-0 flex-1 flex-col overflow-hidden px-6 pt-6 md:px-9 md:pt-9`}>
+    <article className={`${lightCard} flex min-w-0 flex-1 flex-col overflow-hidden px-6 pt-6 md:px-9 md:pt-9`}>
       <div className="flex-1 pb-6 md:pb-8">
-        <p className="text-xs font-semibold tracking-[1px] text-[#56DBB3]">{eyebrow}</p>
+        <p className="text-xs font-semibold tracking-[1px] whitespace-pre text-[#0D5944] md:text-[13px]">{eyebrow}</p>
         <h3 className="mt-2.5 text-[22px] font-bold tracking-[-0.3px] md:mt-3 md:text-[26px]">
           {title}
         </h3>
-        <p className="mt-2.5 text-[15px] leading-6 text-[#F2F0ED]/80 md:mt-3 md:text-base md:leading-[26px]">
+        <p className="mt-2.5 text-[15px] leading-6 text-[#4A4845] md:mt-3 md:text-base md:leading-[26px]">
           {description}
         </p>
       </div>
@@ -224,7 +223,7 @@ export default function RedesignPage({
                 }`}
               >
                 Catch accessibility issues{" "}
-                <span className="text-[#56DBB3]">
+                <span className="text-[#47D4AA]">
                   before <span className="whitespace-nowrap">they ship.</span>
                 </span>
               </h1>
@@ -270,7 +269,7 @@ export default function RedesignPage({
                 <div
                   role="img"
                   aria-label="Scan complete: 5 issues — 3 serious, 1 moderate, 1 minor"
-                  className="absolute bottom-3 left-3 flex max-w-[calc(100%-1.5rem)] flex-col gap-2.5 rounded-[14px] bg-white px-3.5 py-3 text-gray-900 shadow-[0_24px_48px_rgba(0,0,0,0.55)] md:bottom-6 md:left-6 md:rounded-2xl md:px-[18px] md:py-4"
+                  className="absolute bottom-3 left-3 flex max-w-[calc(100%-1.5rem)] flex-col gap-2.5 rounded-[14px] border border-white/10 bg-[#313131] px-3.5 py-3 text-[#F2F0ED] shadow-[0_30px_70px_rgba(0,0,0,0.45)] md:bottom-6 md:left-6 md:rounded-2xl md:px-[18px] md:py-4"
                 >
                   <p className="flex items-center gap-2 text-[13px] font-semibold md:text-sm">
                     <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#47D4AA]">
@@ -297,7 +296,7 @@ export default function RedesignPage({
         {/* Audience */}
         <section
           aria-labelledby="audience-heading"
-          className={`border-y border-white/10 py-6 md:py-7 ${sectionX}`}
+          className={`py-6 md:py-7 ${sectionX}`}
         >
           <div className="mx-auto flex max-w-[1216px] flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
             <h2
@@ -310,7 +309,7 @@ export default function RedesignPage({
               {audience.map((a) => (
                 <li
                   key={a}
-                  className="rounded-full border border-white/10 px-3 py-1.5 text-sm font-semibold text-[#F2F0ED]/90 lg:border-0 lg:p-0 lg:text-[17px]"
+                  className="rounded-full border border-white/10 px-3 py-1.5 text-sm font-semibold text-[#F2F0ED]/90 lg:border-0 lg:p-0 lg:text-[17px] lg:font-normal lg:text-[#F2F0ED]/80"
                 >
                   {a}
                 </li>
@@ -323,27 +322,25 @@ export default function RedesignPage({
         <section
           id="features"
           aria-labelledby="features-heading"
-          className={sectionTight}
+          className={`bg-[#F4F3F0] text-[#1F1F1F] ${sectionX} py-16 md:py-24 lg:py-30`}
         >
           <div className={`mx-auto flex max-w-[1216px] flex-col ${headingGap}`}>
             <div className="flex flex-col gap-2.5 lg:flex-row lg:items-end lg:justify-between">
               <div className="flex flex-col gap-2.5 md:gap-3.5">
-                <p className="text-xs font-semibold tracking-[1.2px] text-[#56DBB3] md:text-sm">
-                  {"// FEATURES"}
+                <p className="text-xs font-semibold tracking-[1.2px] text-[#0D5944] md:text-sm">
+                  FEATURES
                 </p>
                 <h2
                   id="features-heading"
                   className="text-[30px] leading-9 font-bold tracking-[-0.8px] md:text-5xl md:leading-14 md:tracking-[-1.2px]"
                 >
-                  <span className="whitespace-nowrap">Find issues.</span>{" "}
-                  <span className="whitespace-nowrap">Understand them.</span>
-                  <br className="hidden lg:block" />{" "}
-                  <span className="whitespace-nowrap">Verify accessibility.</span>
+                  Clear, actionable testing
+                  <br className="hidden lg:block" /> in one side panel
                 </h2>
               </div>
-              <p className="text-base leading-[25px] text-[#F2F0ED]/80 md:text-lg md:leading-[29px] lg:w-[420px]">
-                Run automated WCAG scans, explore detailed results, and complete guided
-                manual checks without leaving the page you’re testing.
+              <p className="text-base leading-[25px] text-[#4A4845] md:text-lg md:leading-[29px] lg:w-[440px]">
+                From automated WCAG testing to guided manual reviews — identify issues,
+                understand their impact, and find exactly where they are.
               </p>
             </div>
 
@@ -351,14 +348,14 @@ export default function RedesignPage({
               {/* Row 1 */}
               <div className={`flex flex-col lg:flex-row ${cardGap}`}>
                 <article
-                  className={`${card} flex flex-1 flex-col overflow-hidden pt-6 pl-6 md:pt-9 md:pl-9 xl:flex-row xl:items-end xl:gap-7`}
+                  className={`${lightCard} flex flex-1 flex-col overflow-hidden pt-6 pl-6 md:pt-9 md:pl-9 xl:flex-row xl:items-end xl:gap-8`}
                 >
-                  <div className="pr-6 pb-0 md:pr-9 xl:w-[340px] xl:shrink-0 xl:self-start xl:pr-0 xl:pb-9">
-                    <p className="text-xs font-semibold tracking-[1px] text-[#56DBB3]">01 SCAN</p>
+                  <div className="pr-6 pb-0 md:pr-9 xl:w-[360px] xl:shrink-0 xl:self-start xl:pr-0 xl:pb-9">
+                    <p className="text-xs font-semibold tracking-[1px] whitespace-pre text-[#0D5944] md:text-[13px]">{"01  SCAN"}</p>
                     <h3 className="mt-2.5 text-[22px] font-bold tracking-[-0.3px] md:mt-3 md:text-[26px]">
                       Filter by standards
                     </h3>
-                    <p className="mt-2.5 text-[15px] leading-6 text-[#F2F0ED]/80 md:mt-3 md:text-base md:leading-[26px]">
+                    <p className="mt-2.5 text-[15px] leading-6 text-[#4A4845] md:mt-3 md:text-base md:leading-[26px]">
                       Choose the WCAG versions and conformance levels that matter to your
                       project — scan against all of them, or focus on specific requirements.
                     </p>
@@ -369,19 +366,19 @@ export default function RedesignPage({
                       alt="Za11y WCAG standards dropdown with versions 2.0 through 2.2 and levels A to AAA selected"
                       width={700}
                       height={600}
-                      className="w-full xl:w-[440px] xl:max-w-none"
+                      className="w-full xl:w-[420px] xl:max-w-none"
                     />
                   </div>
                 </article>
-                <article className="flex flex-col justify-between gap-3.5 rounded-[20px] bg-[#47D4AA] p-6 text-[#0B1220] md:rounded-3xl md:p-9 lg:w-[380px]">
-                  <p className="text-xs font-bold tracking-[1px] md:text-[13px]">
+                <article className="flex flex-col justify-between gap-3.5 rounded-[20px] bg-[#282828] p-6 text-[#F2F0ED] md:rounded-3xl md:p-9 lg:w-[380px]">
+                  <p className="text-xs font-bold tracking-[1px] text-[#56DBB3] md:text-[13px]">
                     PRIVATE BY DESIGN
                   </p>
-                  <div className="flex flex-col gap-2.5 md:gap-3 lg:mb-12">
+                  <div className="flex flex-col gap-2.5 md:gap-3">
                     <h3 className="text-2xl leading-[29px] font-bold tracking-[-0.4px] md:text-[32px] md:leading-[38px] md:tracking-[-0.6px]">
                       No accounts. No uploads. Just scan.
                     </h3>
-                    <p className="text-[15px] leading-[23px] text-gray-800 md:text-base md:leading-[25px]">
+                    <p className="text-[15px] leading-[23px] text-[#F2F0ED]/80 md:text-base md:leading-[25px]">
                       Za11y runs entirely in your browser, so you can test staging and internal
                       pages with confidence.
                     </p>
@@ -392,14 +389,14 @@ export default function RedesignPage({
               {/* Row 2 */}
               <div className={`flex flex-col lg:flex-row ${cardGap}`}>
                 <MockupCard
-                  eyebrow="02 UNDERSTAND"
+                  eyebrow="02  UNDERSTAND"
                   title="Understand every issue"
                   description="Why it matters, who it impacts, and how to fix it — with affected elements highlighted right on the page."
                   image="/assets/za11y-feature-issues-mockup.png"
                   alt="Za11y issue detail showing WCAG criteria, impact, confidence and a show highlights toggle"
                 />
                 <MockupCard
-                  eyebrow="03 VERIFY"
+                  eyebrow="03  VERIFY"
                   title="Complete the manual review"
                   description="A built-in checklist for keyboard navigation, focus management, content clarity, and everything else that needs human judgment."
                   image="/assets/za11y-feature-checklist-mockup.png"
@@ -412,14 +409,14 @@ export default function RedesignPage({
                 {smallFeatures.map((f) => (
                   <li
                     key={f.title}
-                    className={`${card} flex flex-1 gap-3.5 p-[18px] md:rounded-[20px] md:p-7 lg:flex-col lg:gap-2.5`}
+                    className={`${lightCard} flex flex-1 gap-3.5 p-[18px] md:rounded-[20px] md:p-7 lg:flex-col lg:gap-2.5`}
                   >
                     <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[10px] bg-[#47D4AA]/14 md:h-10 md:w-10">
-                      <Check aria-hidden className="h-[18px] w-[18px] text-[#56DBB3]" strokeWidth={2.5} />
+                      <Check aria-hidden className="h-5 w-5 text-[#0D5944]" strokeWidth={2.5} />
                     </span>
                     <div className="flex flex-col gap-1 lg:gap-2.5">
                       <h3 className="text-base font-bold md:text-[19px]">{f.title}</h3>
-                      <p className="text-sm leading-[21px] text-[#F2F0ED]/80 md:text-[15px] md:leading-6">
+                      <p className="text-sm leading-[21px] text-[#4A4845] md:text-[15px] md:leading-6">
                         {f.description}
                       </p>
                     </div>
@@ -433,15 +430,14 @@ export default function RedesignPage({
         {/* Automated + manual */}
         <section
           aria-labelledby="compare-heading"
-          className={`bg-[#1F1F1F] ${sectionTight}`}
+          className={`bg-[#161616] ${sectionX} py-16 md:py-24 lg:py-28`}
         >
           <div className={`mx-auto flex max-w-[1216px] flex-col md:items-center ${headingGap}`}>
             <h2
               id="compare-heading"
               className="text-[28px] leading-[34px] font-bold tracking-[-0.7px] md:max-w-[760px] md:text-center md:text-[40px] md:leading-12 md:tracking-[-1px]"
             >
-              <span className="md:whitespace-nowrap">Automated scans catch issues.</span>{" "}
-              <span className="md:whitespace-nowrap">Manual reviews go further.</span>
+              Automation finds a lot. Za11y helps you find the rest.
             </h2>
             <div className={`flex w-full flex-col lg:flex-row ${cardGap}`}>
               {comparison.map((c) => (
@@ -459,7 +455,7 @@ export default function RedesignPage({
                         key={item}
                         className="flex items-center gap-2.5 border-t border-white/10 py-2.5 text-[15px] text-[#F2F0ED]/90 md:gap-3 md:py-3 md:text-[17px]"
                       >
-                        <Check aria-hidden className="h-4 w-4 shrink-0 text-[#56DBB3] md:h-[18px] md:w-[18px]" strokeWidth={2.5} />
+                        <Check aria-hidden className="h-4 w-4 shrink-0 text-[#47D4AA] md:h-[18px] md:w-[18px]" strokeWidth={2.5} />
                         {item}
                       </li>
                     ))}
@@ -480,7 +476,7 @@ export default function RedesignPage({
               id="cta-heading"
               className="text-[40px] leading-11 font-bold tracking-[-1.2px] md:text-[64px] md:leading-[70px] md:tracking-[-2px]"
             >
-              Ship <span className="text-[#56DBB3]">accessible</span> experiences.
+              Ship <span className="text-[#47D4AA]">accessible</span> experiences.
             </h2>
             <p className="max-w-[620px] text-base leading-[25px] text-[#F2F0ED]/80 md:text-xl md:leading-[30px]">
               Install Za11y in seconds and run your first scan on the page you’re already
@@ -497,7 +493,7 @@ export default function RedesignPage({
           <div
             aria-labelledby="demo-heading"
             role="region"
-            className={`${card} relative mx-auto mt-14 flex max-w-[760px] flex-col gap-6 p-6 text-left md:mt-20 md:flex-row md:items-center md:gap-10 md:p-9`}
+            className={`${card} relative mx-auto mt-14 flex max-w-[740px] flex-col gap-6 p-6 text-left md:mt-20 md:flex-row md:items-center md:gap-10 md:p-9`}
           >
             <div className="flex flex-1 flex-col gap-3">
               <p className="text-xs font-semibold tracking-[1px] text-[#56DBB3]">
@@ -532,7 +528,7 @@ export default function RedesignPage({
       </main>
 
       {/* Footer */}
-      <footer className={`border-t border-white/10 py-8 md:py-10 ${sectionX}`}>
+      <footer className={`border-t border-white/10 bg-[#161616] py-8 md:py-10 ${sectionX}`}>
         <div className="mx-auto flex max-w-[1216px] flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <img
             src="/assets/za11y-cat-logo.svg"
