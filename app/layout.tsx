@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Za11y — Accessibility Scanner",
+  title: "Za11y: Accessibility Scanner",
   description:
     "Instantly uncover WCAG accessibility issues. Scan any webpage in seconds. Powered by axe-core and running locally in your browser for fast, secure results.",
   verification: {

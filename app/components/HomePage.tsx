@@ -268,7 +268,7 @@ export default function RedesignPage({
                 />
                 <div
                   role="img"
-                  aria-label="Scan complete: 5 issues — 3 serious, 1 moderate, 1 minor"
+                  aria-label="Scan complete: 5 issues (3 serious, 1 moderate, 1 minor)"
                   className="absolute bottom-3 left-3 flex max-w-[calc(100%-1.5rem)] flex-col gap-2.5 rounded-[14px] border border-white/10 bg-[#313131] px-3.5 py-3 text-[#F2F0ED] shadow-[0_30px_70px_rgba(0,0,0,0.45)] md:bottom-6 md:left-6 md:rounded-2xl md:px-[18px] md:py-4"
                 >
                   <p className="flex items-center gap-2 text-[13px] font-semibold md:text-sm">
@@ -339,8 +339,8 @@ export default function RedesignPage({
                 </h2>
               </div>
               <p className="text-base leading-[25px] text-[#4A4845] md:text-lg md:leading-[29px] lg:w-[440px]">
-                From automated WCAG testing to guided manual reviews — identify issues,
-                understand their impact, and find exactly where they are.
+                From automated WCAG testing to guided manual reviews, Za11y helps you
+                identify issues, understand their impact, and find exactly where they are.
               </p>
             </div>
 
@@ -357,7 +357,7 @@ export default function RedesignPage({
                     </h3>
                     <p className="mt-2.5 text-[15px] leading-6 text-[#4A4845] md:mt-3 md:text-base md:leading-[26px]">
                       Choose the WCAG versions and conformance levels that matter to your
-                      project — scan against all of them, or focus on specific requirements.
+                      project. Scan against all of them, or focus on specific requirements.
                     </p>
                   </div>
                   <div className="mt-6 overflow-hidden rounded-tl-xl md:mt-8 md:rounded-tl-[14px] xl:mt-0 xl:min-w-0 xl:flex-1">
@@ -391,7 +391,7 @@ export default function RedesignPage({
                 <MockupCard
                   eyebrow="02  UNDERSTAND"
                   title="Understand every issue"
-                  description="Why it matters, who it impacts, and how to fix it — with affected elements highlighted right on the page."
+                  description="Why it matters, who it impacts, and how to fix it, with affected elements highlighted right on the page."
                   image="/assets/za11y-feature-issues-mockup.png"
                   alt="Za11y issue detail showing WCAG criteria, impact, confidence and a show highlights toggle"
                 />
