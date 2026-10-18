@@ -149,7 +149,8 @@ function MockupCard({
           alt={alt}
           width={700}
           height={600}
-          className="h-full w-full object-cover object-top"
+          // Oversized and offset so the PNG's baked-in dark corners are clipped
+          className="-mt-[2.6%] -ml-[2.6%] w-[105.2%] max-w-none"
         />
       </div>
     </article>
@@ -296,7 +297,7 @@ export default function RedesignPage({
         {/* Audience */}
         <section
           aria-labelledby="audience-heading"
-          className={`py-6 md:py-7 ${sectionX}`}
+          className={`border-t border-white/10 bg-[#1F1F1F] py-6 md:py-7 ${sectionX}`}
         >
           <div className="mx-auto flex max-w-[1216px] flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
             <h2
@@ -366,7 +367,9 @@ export default function RedesignPage({
                       alt="Za11y WCAG standards dropdown with versions 2.0 through 2.2 and levels A to AAA selected"
                       width={700}
                       height={600}
-                      className="w-full xl:w-[420px] xl:max-w-none"
+                      // The PNG has dark rounded corners baked in. Oversize it slightly and use
+                      // negative margins so the wrapper's overflow-hidden clips every corner.
+                      className="-m-[2.6%] w-[105.2%] max-w-none xl:m-0 xl:-mb-[11px] xl:w-[420px]"
                     />
                   </div>
                 </article>
