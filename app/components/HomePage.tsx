@@ -2,6 +2,7 @@
 import { Check } from "lucide-react";
 import Link from "next/link";
 import HeroVideo from "./HeroVideo";
+import ScrollHeader from "./ScrollHeader";
 
 const CHROME_STORE_URL =
   "https://chromewebstore.google.com/detail/za11y/jckcbiebopjcodmdigkajekpkohnjegg";
@@ -174,7 +175,7 @@ export default function RedesignPage({
       </a>
 
       {/* Nav */}
-      <header className="sticky top-0 z-50 bg-[#282828]">
+      <ScrollHeader>
         <nav
           aria-label="Main"
           className="flex h-16 items-center justify-between px-5 md:h-20 md:px-16"
@@ -201,7 +202,7 @@ export default function RedesignPage({
             </PrimaryButton>
           </div>
         </nav>
-      </header>
+      </ScrollHeader>
 
       <main id="main">
         {/* Hero */}
